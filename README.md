@@ -17,8 +17,8 @@ http://my.herokuapp.com/
 * Google Maps API
 * Gym Flow API
 * UnderArmour
-
-* API one - https://developers.google.com/maps/?hl=en*API two - http://www.mygymflow.com/api.html
+* API one - https://developers.google.com/maps/?hl=en
+* API two - http://www.mygymflow.com/api.html
 * API three - https://developer.underarmour.com/
 
 ### Trello Link
