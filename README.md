@@ -14,13 +14,12 @@ http://my.herokuapp.com/
 
 
 ### API's Used
-1) Google Maps API
-2) Gym Flow API
-3) UnderArmour
+* Google Maps API
+* Gym Flow API
+* UnderArmour
 
-API one - https://developers.google.com/maps/?hl=en
-API two - http://www.mygymflow.com/api.html
-API three - https://developer.underarmour.com/
+* API one - https://developers.google.com/maps/?hl=en*API two - http://www.mygymflow.com/api.html
+* API three - https://developer.underarmour.com/
 
 ### Trello Link
 
