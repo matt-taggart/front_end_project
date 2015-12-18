@@ -14,29 +14,6 @@ $(document).ready(function() {
 
   });
 
-  function buildThumbnail(photoData) {
-    var photoUrl = "https://farm" + photoData.farm;
-    photoUrl += ".staticflickr.com/" + photoData.server;
-    photoUrl += "/" + photoData.id;
-    photoUrl += "_" + photoData.secret + ".jpg";
-
-    var colDiv = $("<div>").addClass("col-md-3");
-    var thumbnailDiv = $("<div>").addClass("thumbnail");
-    var photoImg = $("<img>").attr("src", photoUrl);
-    var captionDiv = $("<div>").addClass("caption");
-    var picTitle = $("<p>").append(photoData.title);
-
-    colDiv.append(thumbnailDiv
-      .append(photoImg)
-      .append(captionDiv
-        .append(picTitle)
-      )
-    );
-
-    return colDiv;
-
-  }
-
   function googleApiSuccessHandler(response) {
 
     var geoLocation = response.results[0].geometry.location;
@@ -57,11 +34,4 @@ $(document).ready(function() {
     });
   }
 
-  function flickrSuccessHandler(response) {
-    var locationPhotos = response.photos.photo;
-    for(var i = 0; i < locationPhotos.length; i++) {
-      var newCol = buildThumbnail(locationPhotos[i]);
-      $("#photosRow").append(newCol);
-    }
-  }
 });
