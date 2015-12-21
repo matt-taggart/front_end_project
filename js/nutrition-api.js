@@ -51,9 +51,29 @@ $(document).ready(function() {
     }
 
     $(document).on('click', '.nutrition', function(e){
-      e.preventDefault();
       var ndbNumber = $(this).attr('data-ndbnum');
+      var serving, tableHeading;      
+      e.preventDefault();
+      $(".modal-content").empty();
       $("#nutrition-facts").openModal();
+      $.ajax({
+        type: "GET",
+        url: "http://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=" + apiKey + "&nutrients=205&nutrients=204&nutrients=208&nutrients=269&ndbno=" + ndbNumber,
+        success: function(data) {
+          for (var i = 0; i < data.report.foods.length; i++) {
+            tableHeading = $("<h4>").html("Nutrition Facts");
+            $(".modal-content").append(tableHeading);
+            serving = $("<p>").html("Serving Size " + data.report.foods[i].measure);
+            $(".modal-content").append(serving);
+            $("<p>").addClass("divider");
+          }
+        },
+        error: function(jqXHR, textstatus, errorThrown) {
+          console.log(jqXHR);
+          console.log(textstatus);
+          console.log(errorThrown);
+        }
+      });
     });
 
 
