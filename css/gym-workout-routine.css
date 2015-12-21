@@ -1,0 +1,14 @@
+.right {
+  text-align: right;
+  margin-right: 20px;
+}
+
+.btn-large {
+  width: 100%;
+}
+
+#header {
+  font-size: 4em;
+  background-color: blue;
+  color: white;
+}
