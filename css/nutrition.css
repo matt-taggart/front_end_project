@@ -35,6 +35,12 @@ h4 {
   margin-bottom: -7px;
 }
 
+.dividerC {
+  padding: 8px;
+  background: black;
+  margin-top: -10px;
+}
+
 .small-divider {
   margin-bottom: -7px;
   border-bottom: 1px solid black;

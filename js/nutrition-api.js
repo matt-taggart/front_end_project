@@ -52,7 +52,7 @@ $(document).ready(function() {
     //Saturated fat 606, Trans fat 605, Cholesterol 601, Energy 268, Sodium 307, Fiber 291, Protein 203
     $(document).on('click', '.nutrition', function(e){
       var ndbNumber = $(this).attr('data-ndbnum');
-      var serving, tableHeading, dividerA, dividerB, amountPerServing, calories, totalFat, saturatedFat, transFat, cholesterol, sodium, carbs, fiber, sugar, protein;      
+      var serving, tableHeading, dividerA, dividerB, dividerC, amountPerServing, calories, totalFat, saturatedFat, transFat, cholesterol, sodium, carbs, fiber, sugar, protein;      
       e.preventDefault();
       $(".modal-content").empty();
       $("#nutrition-facts").openModal();
@@ -90,7 +90,9 @@ $(document).ready(function() {
             sugar = $("<p>").addClass("sugar").addClass("small-divider").html("Sugars " + round(data.report.foods[i].nutrients[4].value) + data.report.foods[i].nutrients[4].unit);
             $(".modal-content").append(sugar);
             protein = $("<p>").addClass("protein").html("<strong>Protein</strong> " + round(data.report.foods[i].nutrients[1].value) + data.report.foods[i].nutrients[1].unit);
-            $(".modal-content").append(protein);   
+            $(".modal-content").append(protein);
+            dividerC = $("<p>").addClass("dividerC");
+            $(".modal-content").append(dividerC);
           }
         },
         error: function(jqXHR, textstatus, errorThrown) {
