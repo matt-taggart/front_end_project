@@ -7,5 +7,35 @@ h1 {
 }
 
 h4 {
+  margin-bottom: -15px;
+}
+
+.serving-size {
   margin-bottom: -10px;
+}
+
+.amount-per-serving {
+  font-size: 12px;
+}
+
+.calories {
+  margin-bottom: -10px;
+  margin-top: 15px;
+}
+
+.dividerA {
+  padding: 8px;
+  background: black;
+  margin-bottom: -7px;
+}
+
+.dividerB {
+  padding: 4px;
+  background: black;
+  margin-bottom: -7px;
+}
+
+.small-divider {
+  margin-bottom: -7px;
+  border-bottom: 1px solid black;
 }
