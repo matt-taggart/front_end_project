@@ -8,6 +8,7 @@ body {
   margin-bottom: 25px;
 }
 
+
 h4 {
   margin-bottom: -15px;
 }
@@ -54,6 +55,9 @@ h4 {
 
 table {
   table-layout: fixed;
+  width: 100%;
 }
 
-tbody tr 
+.header-text {
+  font-size: 20px;
+}

@@ -41,7 +41,7 @@ $(document).ready(function() {
         ndbNumber = itemList[i].ndbno;
         newDiv = $("<td>");
         createButton = $("<a>")
-                        .addClass("waves-effect waves-light btn cyan lighten-2 nutrition modal-trigger")
+                        .addClass("waves-effect waves-light btn cyan nutrition modal-trigger")
                         .attr("href", "#nutrition-facts")
                         .html("Nutrition Facts")
                         .attr('data-ndbnum', ndbNumber);
