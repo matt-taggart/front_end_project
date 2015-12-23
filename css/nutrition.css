@@ -1,9 +1,11 @@
 body {
-  background: #f9f4ed;
+  background: url("restaurant_icons.png");
 }
 
-h1 {
- color: white;
+/*f9f4ed*/
+
+#food-search {
+  margin-bottom: 25px;
 }
 
 h4 {
@@ -45,3 +47,13 @@ h4 {
   margin-bottom: -7px;
   border-bottom: 1px solid black;
 }
+
+.bg-white {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+table {
+  table-layout: fixed;
+}
+
+tbody tr 
