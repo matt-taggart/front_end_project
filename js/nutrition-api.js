@@ -30,6 +30,7 @@ $(document).ready(function() {
     function buildTable(foodData) {
       var itemList = foodData.list.item;
       var foodGroup, foodName, newDiv, createButton, ndbNumber, createTable, categoryHeading, nameHeading, tr, headTr;
+      
       $("table").addClass("bordered centered bg-white responsive-table");
       categoryHeading = $("<th>").html("Category");
       nameHeading = $("<th>").html("Name");
