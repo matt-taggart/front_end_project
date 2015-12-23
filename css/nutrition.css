@@ -12,6 +12,13 @@ body {
   margin-bottom: 25px;
 }
 
+.panel-header {
+  font-size: 35px;
+}
+
+.panel-header-text {
+  font-size: 16px;
+}
 
 h4 {
   margin-bottom: -15px;
@@ -68,7 +75,7 @@ td {
 }
 
 .header-text {
-  font-size: 20px;
+  font-size: 12px;
 }
 
 .sm-indent {
