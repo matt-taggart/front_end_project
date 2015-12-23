@@ -29,18 +29,19 @@ $(document).ready(function() {
 
     function buildTable(foodData) {
       var itemList = foodData.list.item;
-      var foodGroup, foodName, newDiv, createButton, ndbNumber, createTable, tableHead, categoryHeading, nameHeading, tr;
-      $("table").addClass("bordered");
+      var foodGroup, foodName, newDiv, createButton, ndbNumber, createTable, categoryHeading, nameHeading, tr, headTr;
+      $("table").addClass("bordered centered bg-white responsive-table");
       categoryHeading = $("<th>").html("Category");
       nameHeading = $("<th>").html("Name");
-      $("thead").append(categoryHeading).append(nameHeading);       
+      headTr = $("<tr>").append(categoryHeading).append(nameHeading);
+      $("thead").addClass("centered").append(headTr);       
       for (var i = 0; i < itemList.length; i++) {
         foodGroup = $("<td>").html(itemList[i].group);
         foodName = $("<td>").html(itemList[i].name);
         ndbNumber = itemList[i].ndbno;
         newDiv = $("<td>");
         createButton = $("<a>")
-                        .addClass("waves-effect waves-light btn cyan nutrition modal-trigger")
+                        .addClass("waves-effect waves-light btn cyan lighten-2 nutrition modal-trigger")
                         .attr("href", "#nutrition-facts")
                         .html("Nutrition Facts")
                         .attr('data-ndbnum', ndbNumber);
