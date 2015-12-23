@@ -2,6 +2,10 @@ body {
   background: url("restaurant_icons.png");
 }
 
+.container {
+  margin-bottom: 50px;
+}
+
 /*f9f4ed*/
 
 #food-search {
@@ -58,10 +62,16 @@ table {
   width: 100%;
 }
 
-table tr td {
-  width: 200px;
+td {
+  width: 300px;
+  white-space: normal;
 }
 
 .header-text {
   font-size: 20px;
 }
+
+.sm-indent {
+  text-indent: 20px;
+}
+
