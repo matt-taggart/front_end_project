@@ -70,7 +70,7 @@ $(document).ready(function() {
             $(".modal-content").append(dividerA);
             amountPerServing = $("<p>").addClass("amount-per-serving small-divider").html("<strong>Amount Per Serving</strong>");
             $(".modal-content").append(amountPerServing);
-            calories = $("<p>").addClass("calories").html("<strong>Calories </strong>" + data.report.foods[i].nutrients[9].value);
+            calories = $("<p>").addClass("calories").html("<strong>Calories </strong>" + data.report.foods[i].nutrients[9].value + "<span class='lg-indent'>Calories from Fat " + round(data.report.foods[i].nutrients[2].value*9) + "</span>");
             $(".modal-content").append(calories);
             dividerB = $("<p>").addClass("dividerB");
             $(".modal-content").append(dividerB);
