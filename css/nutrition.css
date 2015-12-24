@@ -75,6 +75,10 @@ td {
   text-indent: 20px;
 }
 
+.lg-indent {
+  margin-left: 35px;
+}
+
 /* label focus color */
 .input-field input[type=text]:focus + label {
  color: #00bcd4;
