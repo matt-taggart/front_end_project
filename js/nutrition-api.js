@@ -52,9 +52,10 @@ $(document).ready(function() {
     }
     //Saturated fat 606, Trans fat 605, Cholesterol 601, Energy 268, Sodium 307, Fiber 291, Protein 203
     $(document).on('click', '.nutrition', function(e){
-      var ndbNumber = $(this).attr('data-ndbnum');
-      var serving, tableHeading, dividerA, dividerB, dividerC, amountPerServing, calories, totalFat, saturatedFat, transFat, cholesterol, sodium, carbs, fiber, sugar, protein;      
       e.preventDefault();
+      var ndbNumber = $(this).attr('data-ndbnum');
+      var serving, tableHeading, dividerA, dividerB, dividerC, amountPerServing, calories, totalFat, saturatedFat, transFat, cholesterol, sodium, carbs, fiber, sugar, protein;
+      var addCalories, addFat, addSatFat, addTransFat, addCholesterol, addSodium, addCarbs, addFiber, addSugar, addProtein; 
       $(".modal-content").empty();
       $("#nutrition-facts").openModal();
       $.ajax({
@@ -62,6 +63,16 @@ $(document).ready(function() {
         url: "http://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=" + apiKey + "&nutrients=205&nutrients=204&nutrients=208&nutrients=269&nutrients=606&nutrients=605&nutrients=601&nutrients=268&nutrients=307&nutrients=291&nutrients=203&ndbno=" + ndbNumber,
         success: function(data) {
           for (var i = 0; i < data.report.foods.length; i++) {
+            calories = data.report.foods[i].nutrients[9];
+            totalFat = data.report.foods[i].nutrients[2];
+            saturatedFat = data.report.foods[i].nutrients[7];
+            transFat = data.report.foods[i].nutrients[8];
+            cholesterol = data.report.foods[i].nutrients[0];
+            sodium = data.report.foods[i].nutrients[5];
+            carbs = data.report.foods[i].nutrients[3];
+            fiber = data.report.foods[i].nutrients[10];
+            sugar = data.report.foods[i].nutrients[4];
+            protein = data.report.foods[i].nutrients[1];            
             tableHeading = $("<h4>").html("Nutrition Facts");
             $(".modal-content").append(tableHeading);
             serving = $("<p>").addClass("serving-size").html("Serving Size " + data.report.foods[i].measure);
@@ -70,28 +81,28 @@ $(document).ready(function() {
             $(".modal-content").append(dividerA);
             amountPerServing = $("<p>").addClass("amount-per-serving small-divider").html("<strong>Amount Per Serving</strong>");
             $(".modal-content").append(amountPerServing);
-            calories = $("<p>").addClass("calories").html("<strong>Calories </strong>" + data.report.foods[i].nutrients[9].value + "<span class='lg-indent'>Calories from Fat " + round(data.report.foods[i].nutrients[2].value*9) + "</span>");
-            $(".modal-content").append(calories);
+            addCalories = $("<p>").addClass("calories").html("<strong>Calories </strong>" + calories.value + "<span class='lg-indent'>Calories from Fat " + round(totalFat.value*9) + "</span>");
+            $(".modal-content").append(addCalories);
             dividerB = $("<p>").addClass("dividerB");
             $(".modal-content").append(dividerB);
-            totalFat = $("<p>").addClass("total-fat small-divider").html("<strong>Total Fat </strong>" + round(data.report.foods[i].nutrients[2].value) + data.report.foods[i].nutrients[1].unit);
-            $(".modal-content").append(totalFat);
-            saturatedFat = $("<p>").addClass("saturated-fats small-divider sm-indent").html("Saturated Fat " + round(data.report.foods[i].nutrients[7].value) + data.report.foods[i].nutrients[7].unit);
-            $(".modal-content").append(saturatedFat);
-            transFat = $("<p>").addClass("trans-fat small-divider sm-indent").html("Trans Fat " + round(data.report.foods[i].nutrients[8].value) + data.report.foods[i].nutrients[8].unit);
-            $(".modal-content").append(transFat);
-            cholesterol = $("<p>").addClass("cholesterol small-divider").html("<strong>Cholesterol</strong> " + round(data.report.foods[i].nutrients[0].value) + data.report.foods[i].nutrients[0].unit);
-            $(".modal-content").append(transFat);
-            sodium = $("<p>").addClass("sodium small-divider").html("<strong>Sodium</strong> " + round(data.report.foods[i].nutrients[5].value) + data.report.foods[i].nutrients[5].unit);
-            $(".modal-content").append(sodium);
-            carbs = $("<p>").addClass("carbs small-divider").html("<strong>Total Carbohydrate</strong> " + round(data.report.foods[i].nutrients[3].value) + data.report.foods[i].nutrients[3].unit);
-            $(".modal-content").append(carbs);
-            fiber = $("<p>").addClass("fiber small-divider sm-indent").html("Dietary Fiber " + round(data.report.foods[i].nutrients[10].value) + data.report.foods[i].nutrients[10].unit);
-            $(".modal-content").append(fiber);
-            sugar = $("<p>").addClass("sugar small-divider sm-indent").html("Sugars " + round(data.report.foods[i].nutrients[4].value) + data.report.foods[i].nutrients[4].unit);
-            $(".modal-content").append(sugar);
-            protein = $("<p>").addClass("protein").html("<strong>Protein</strong> " + round(data.report.foods[i].nutrients[1].value) + data.report.foods[i].nutrients[1].unit);
-            $(".modal-content").append(protein);
+            addFat = $("<p>").addClass("total-fat small-divider").html("<strong>Total Fat </strong>" + round(totalFat.value) + totalFat.unit);
+            $(".modal-content").append(addFat);
+            addSatFat = $("<p>").addClass("saturated-fats small-divider sm-indent").html("Saturated Fat " + round(saturatedFat.value) + saturatedFat.unit);
+            $(".modal-content").append(addSatFat);
+            addTransFat = $("<p>").addClass("trans-fat small-divider sm-indent").html("Trans Fat " + round(transFat.value) + transFat.unit);
+            $(".modal-content").append(addTransFat);
+            addCholesterol = $("<p>").addClass("cholesterol small-divider").html("<strong>Cholesterol</strong> " + round(cholesterol) + cholesterol.unit);
+            $(".modal-content").append(addCholesterol);
+            addSodium = $("<p>").addClass("sodium small-divider").html("<strong>Sodium</strong> " + round(sodium.value) + sodium.unit);
+            $(".modal-content").append(addSodium);
+            addCarbs = $("<p>").addClass("carbs small-divider").html("<strong>Total Carbohydrate</strong> " + round(carbs.value) + carbs.unit);
+            $(".modal-content").append(addCarbs);
+            addFiber = $("<p>").addClass("fiber small-divider sm-indent").html("Dietary Fiber " + round(fiber.value) +fiber.unit);
+            $(".modal-content").append(addFiber);
+            addSugar = $("<p>").addClass("sugar small-divider sm-indent").html("Sugars " + round(sugar.value) + sugar.unit);
+            $(".modal-content").append(addSugar);
+            addProtein = $("<p>").addClass("protein").html("<strong>Protein</strong> " + round(protein.value) + protein.unit);
+            $(".modal-content").append(addProtein);
             dividerC = $("<p>").addClass("dividerC");
             $(".modal-content").append(dividerC);
           }
