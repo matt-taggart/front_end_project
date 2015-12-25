@@ -12,7 +12,6 @@ body {
   margin-bottom: 25px;
 }
 
-
 h4 {
   margin-bottom: -15px;
 }
@@ -74,7 +73,6 @@ td {
 .sm-indent {
   text-indent: 20px;
 }
-
 
 /* label focus color */
 .input-field input[type=text]:focus + label {

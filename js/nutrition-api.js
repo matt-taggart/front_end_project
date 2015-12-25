@@ -3,28 +3,32 @@ var apiKey = "rHkKtH6RMPiYlFkjl3jBGWpfcEJB3ZMqkyZmAxHK";
 $(document).ready(function() {
 
   $("#food-search").on("click", function(e) {
+      var search = $("input:text").val();    
+      e.preventDefault();
+      $("thead").empty();
+      $("tbody").empty();
 
-    var search = $("input:text").val();    
+      var foodSearchParams = {
+        "format": "json",
+        "q": search,
+        "sort": "r",
+        "max": 25,
+        "offset": 0,
+        "api_key": apiKey
+      }
 
-    e.preventDefault();
-
-    $("thead").empty();
-    $("tbody").empty();
-
-    $.ajax({
-    type: "GET",
-    url: "http://api.nal.usda.gov/ndb/search/?format=json&q=" + search + "&sort=r&max=25&offset=0&api_key=" + apiKey,
-    success: function(data) {
-        var foodList = buildTable(data);           
-    },
-    error: function(jqXHR, textstatus, errorThrown) {
-      console.log(jqXHR);
-      console.log(textstatus);
-      console.log(errorThrown);
-    }
-
-    });
-
+      $.ajax({
+        type: "GET",
+        url: "http://api.nal.usda.gov/ndb/search/?" + $.param(foodSearchParams),
+        success: function(data) {
+            var foodList = buildTable(data);           
+        },
+        error: function(jqXHR, textstatus, errorThrown) {
+          console.log(jqXHR);
+          console.log(textstatus);
+          console.log(errorThrown);
+        }
+      });
   });
 
     function buildTable(foodData) {
@@ -54,7 +58,7 @@ $(document).ready(function() {
     $(document).on('click', '.nutrition', function(e){
       e.preventDefault();
       var ndbNumber = $(this).attr('data-ndbnum');
-      var serving, tableHeading, dividerA, dividerB, dividerC, amountPerServing, calories, totalFat, saturatedFat, transFat, cholesterol, sodium, carbs, fiber, sugar, protein;
+      var serving, tableHeading, dailyValueHeader, dividerA, dividerB, dividerC, amountPerServing, calories, totalFat, saturatedFat, transFat, cholesterol, sodium, carbs, fiber, sugar, protein;
       var addCalories, addFat, addSatFat, addTransFat, addCholesterol, addSodium, addCarbs, addFiber, addSugar, addProtein; 
       $(".modal-content").empty();
       $("#nutrition-facts").openModal();
@@ -74,37 +78,39 @@ $(document).ready(function() {
             sugar = data.report.foods[i].nutrients[4];
             protein = data.report.foods[i].nutrients[1];            
             tableHeading = $("<h4>").html("Nutrition Facts");
-            $(".modal-content").append(tableHeading);
+            appendToModal(tableHeading);
             serving = $("<p>").addClass("serving-size").html("Serving Size " + data.report.foods[i].measure);
-            $(".modal-content").append(serving);
+            appendToModal(serving);
             dividerA = $("<p>").addClass("dividerA");
-            $(".modal-content").append(dividerA);
+            appendToModal(dividerA);
             amountPerServing = $("<p>").addClass("amount-per-serving small-divider").html("<strong>Amount Per Serving</strong>");
-            $(".modal-content").append(amountPerServing);
+            appendToModal(amountPerServing);
             addCalories = $("<p>").addClass("calories").html("<strong>Calories </strong>" + calories.value + "<span class='lg-indent'>Calories from Fat " + round(totalFat.value*9) + "</span>");
-            $(".modal-content").append(addCalories);
+            appendToModal(addCalories);
             dividerB = $("<p>").addClass("dividerB");
-            $(".modal-content").append(dividerB);
+            appendToModal(dividerB);
+            dailyValueHeader = $("<p>").addClass("small-divider indent-dv").html("<strong>% Daily Value</strong>");
+            appendToModal(dailyValueHeader);
             addFat = $("<p>").addClass("total-fat small-divider").html("<strong>Total Fat </strong>" + round(totalFat.value) + totalFat.unit);
-            $(".modal-content").append(addFat);
+            appendToModal(addFat);
             addSatFat = $("<p>").addClass("saturated-fats small-divider sm-indent").html("Saturated Fat " + round(saturatedFat.value) + saturatedFat.unit);
-            $(".modal-content").append(addSatFat);
+            appendToModal(addSatFat);
             addTransFat = $("<p>").addClass("trans-fat small-divider sm-indent").html("Trans Fat " + round(transFat.value) + transFat.unit);
-            $(".modal-content").append(addTransFat);
+            appendToModal(addTransFat);
             addCholesterol = $("<p>").addClass("cholesterol small-divider").html("<strong>Cholesterol</strong> " + round(cholesterol) + cholesterol.unit);
-            $(".modal-content").append(addCholesterol);
+            appendToModal(addCholesterol);
             addSodium = $("<p>").addClass("sodium small-divider").html("<strong>Sodium</strong> " + round(sodium.value) + sodium.unit);
-            $(".modal-content").append(addSodium);
+            appendToModal(addSodium);
             addCarbs = $("<p>").addClass("carbs small-divider").html("<strong>Total Carbohydrate</strong> " + round(carbs.value) + carbs.unit);
-            $(".modal-content").append(addCarbs);
+            appendToModal(addCarbs);
             addFiber = $("<p>").addClass("fiber small-divider sm-indent").html("Dietary Fiber " + round(fiber.value) +fiber.unit);
-            $(".modal-content").append(addFiber);
+            appendToModal(addFiber);
             addSugar = $("<p>").addClass("sugar small-divider sm-indent").html("Sugars " + round(sugar.value) + sugar.unit);
-            $(".modal-content").append(addSugar);
+            appendToModal(addSugar);
             addProtein = $("<p>").addClass("protein").html("<strong>Protein</strong> " + round(protein.value) + protein.unit);
-            $(".modal-content").append(addProtein);
+            appendToModal(addProtein);
             dividerC = $("<p>").addClass("dividerC");
-            $(".modal-content").append(dividerC);
+            appendToModal(dividerC);
           }
         },
         error: function(jqXHR, textstatus, errorThrown) {
@@ -128,6 +134,10 @@ $(document).ready(function() {
       } else {
         return number;        
       }
+    }
+
+    function appendToModal(nutrient) {
+      $(".modal-content").append(nutrient);
     }
 
 });

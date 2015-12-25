@@ -13,7 +13,10 @@
     font-size: 25px;
   }
   .lg-indent {
-    margin-left: 85px;
+    margin-left: 80px;
+  }
+  .indent-dv {
+    text-indent: 180px;
   }
 }
 
@@ -34,7 +37,9 @@
   .lg-indent {
     margin-left: 97px;
   }
-
+  .indent-dv {
+    text-indent: 185px;
+  }
   #nutrition-facts {
     width: 70%;
   }
@@ -58,7 +63,9 @@
   .lg-indent {
     margin-left: 200px;
   }
-
+  .indent-dv {
+    text-indent: 325px;
+  }
   #nutrition-facts {
     width: 65%;
   }
@@ -74,16 +81,15 @@
   .panel-header-text {
     font-size: 20px;
   }
-
   #nutrition-facts {
     width: 50%;
   }
-
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
   #nutrition-facts {
-    width: 45%;
+    width: 45%; 
   }
+
 }
