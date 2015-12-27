@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gym lifestyle web app</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="../css/main-page.css">
+<link rel="stylesheet" type="text/css" href="../css/gym-workout-routine.css">
+</head>
+<body>
+
+<div id="header">Workout Selector</div>
+<br>
+<div class="row">
+  <div class="col s12">
+    <ul class="tabs">
+      <li class="tab col s2"><a class="active" href="#absTab">Abs</a></li>
+      <li class="tab col s2"><a href="#armsTab">Arms</a></li>
+      <li class="tab col s2"><a href="#backTab">Back</a></li>
+      <li class="tab col s2"><a href="#chestTab">Chest</a></li>
+      <li class="tab col s2"><a href="#legsTab">Legs</a></li>
+      <li class="tab col s2"><a href="#shouldersTab">Shoulders</a></li>
+    </ul>
+  </div>
+  <div id="absTab" class="col s12 m12">
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card white">
+          <div class="card-content black-text">
+            <span class="card-title">Barbell Triceps Extension</span>
+            <hr>
+            <p>Position barbell overhead with narrow overhand grip.  Lower forearm behind upper arm with elbows remaining overhead. Extend forearm overhead. Lower and repeat.</p>
+            <br />
+            <p>Equipment: Barbell</p>
+          </div>
+          <div class="card-action">
+            <a href="#modal-more-info" class="more-info modal-trigger" id="barbell-triceps-extension">More Info</a>
+            <a href="#" class="add-workout pull right" id="add-barbell-triceps-extension">Add to workout list</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6">
+        <div class="card white">
+          <div class="card-content black-text">
+            <span class="card-title modal-trigger">Bench press narrow grip</span>
+            <p>Lay down on a bench, the bar is directly over your eyes, the knees form a slight angle and the feet are firmly on the ground. Hold the bar with a narrow grip (around 20cm.). Lead the weight slowly down till the arms are parallel to the floor (elbow: right angle), press then the bar up. When bringing the bar down, don't let it down on your nipples as with the regular bench pressing, but somewhat lower.</p>
+            <br />
+            <p>Equipment: Barbell, bench</p>
+          </div>
+          <div class="card-action">
+            <a href="#modal-more-info" class="more-info modal-trigger" id="bench-press-narrow-grip">More Info</a>
+            <a href="#" class="add-workout pull right" id="bench-press-narrow-grip">Add to workout list</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div id="armsTab" class="col s12">Arms</div>
+  <div id="backTab" class="col s12">Back</div>
+  <div id="chestTab" class="col s12">Chest</div>
+  <div id="legsTab" class="col s12">Legs</div>
+  <div id="shouldersTab" class="col s12">Shoulders</div>
+</div>
+
+<!-- Modal Structure -->
+<div id="modal-more-info" class="modal">
+  <div class="modal-content">
+    <h4 id="exercise-title"></h4>
+    <p id="exercise-description"></p>
+    <hr>
+    <p id="exercise-equipment"></p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+  </div>
+</div>
+        
+
+
+
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/gym-routine-list.js"></script>
+<script type="text/javascript" src="../json/workout-information.json"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+</body>
+</html>

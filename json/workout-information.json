@@ -1,0 +1,49 @@
+var workoutInfo = {
+    "id": [
+        {
+            "barbell-triceps-extension": [
+                {
+                    "exercise": "Barbell Triceps Extension"
+                },
+                {
+                    "description": "Position barbell overhead with narrow overhand grip. Lower forearm behind upper arm with elbows remaining overhead. Extend forearm overhead. Lower and repeat."
+                },
+                {
+                    "equipment": "Barbell"
+                },
+                {
+                    "muscles-front": ""
+                },
+                {
+                    "muscles-back": ""
+                },
+                {
+                    "workout-video-url": "https://www.youtube.com/watch?v=a2TkTaXagRQ"
+                }
+            ]
+        },
+        {
+            "bench-press-narrow-grip": [
+                {
+                    "exercise": "bench-press-narrow-grip"
+                },
+                {
+                    "description": "Lay down on a bench, the bar is directly over your eyes, the knees form a slight angle and the feet are firmly on the ground. Hold the bar with a narrow grip (around 20cm.). Lead the weight slowly down till the arms are parallel to the floor (elbow: right angle), press then the bar up. When bringing the bar down, don't let it down on your nipples as with the regular bench pressing, but somewhat lower."
+                },
+                {
+                    "equipment": "Barbell, bench"
+                },
+                {
+                    "muscles-front": ""
+                },
+                {
+                    "muscles-back": ""
+                },
+                {
+                    "workout-video-url": ""
+                }
+
+            ]
+        }
+    ]
+}
