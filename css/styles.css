@@ -7,8 +7,18 @@
 
 .icon-block .material-icons {
   font-size: inherit;
+  color: #fff;
 }
 
 p {
   line-height: 2rem;
+  color: #fff;
+}
+
+.center {
+  color: #fff;
+}
+
+.header {
+  color: #fff;
 }
