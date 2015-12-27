@@ -1,6 +1,9 @@
 /*.parallax-container {
       height: 653px;
-    }*/
+    }
+    .modal {
+  max-height: xx%  !important;
+}*/
 
 .icon-block .material-icons {
   font-size: inherit;
