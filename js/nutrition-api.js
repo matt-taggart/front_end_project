@@ -58,7 +58,7 @@ $(document).ready(function() {
     $(document).on('click', '.nutrition', function(e){
       e.preventDefault();
       var ndbNumber = $(this).attr('data-ndbnum');
-      var serving, tableHeading, dividerA, dividerB, dividerC, amountPerServing, calories, totalFat, saturatedFat, transFat, cholesterol, sodium, carbs, fiber, sugar, protein;
+      var serving, measure, tableHeading, dividerA, dividerB, dividerC, amountPerServing, calories, totalFat, saturatedFat, transFat, cholesterol, sodium, carbs, fiber, sugar, protein;
       var addCalories, addFat, addSatFat, addTransFat, addCholesterol, addSodium, addCarbs, addFiber, addSugar, addProtein; 
       $(".modal-content").empty();
       $("#nutrition-facts").openModal();
@@ -76,10 +76,11 @@ $(document).ready(function() {
             carbs = data.report.foods[i].nutrients[3];
             fiber = data.report.foods[i].nutrients[10];
             sugar = data.report.foods[i].nutrients[4];
-            protein = data.report.foods[i].nutrients[1];            
+            protein = data.report.foods[i].nutrients[1]; 
+            measure = data.report.foods[i].measure;        
             tableHeading = $("<h4>").html("Nutrition Facts");
             appendToModal(tableHeading);
-            serving = $("<p>").addClass("serving-size").html("Serving Size " + data.report.foods[i].measure);
+            serving = $("<p>").addClass("serving-size").html("Serving Size " + parseUnitOfMeasure(measure));
             appendToModal(serving);
             dividerA = $("<p>").addClass("dividerA");
             appendToModal(dividerA);
@@ -89,11 +90,11 @@ $(document).ready(function() {
             appendToModal(addCalories);
             dividerB = $("<p>").addClass("dividerB");
             appendToModal(dividerB);
-            addFat = $("<p>").addClass("total-fat small-divider").html("<strong>Total Fat </strong>" + round(totalFat.value) + totalFat.unit);
+            addFat = $("<p>").addClass("total-fat small-divider").html("<strong>Total Fat </strong>" + roundHalf(totalFat.value) + totalFat.unit);
             appendToModal(addFat);
-            addSatFat = $("<p>").addClass("saturated-fats small-divider sm-indent").html("Saturated Fat " + round(saturatedFat.value) + saturatedFat.unit);
+            addSatFat = $("<p>").addClass("saturated-fats small-divider sm-indent").html("Saturated Fat " + roundHalf(saturatedFat.value) + saturatedFat.unit);
             appendToModal(addSatFat);
-            addTransFat = $("<p>").addClass("trans-fat small-divider sm-indent").html("Trans Fat " + round(transFat.value) + transFat.unit);
+            addTransFat = $("<p>").addClass("trans-fat small-divider sm-indent").html("Trans Fat " + roundHalf(transFat.value) + transFat.unit);
             appendToModal(addTransFat);
             addCholesterol = $("<p>").addClass("cholesterol small-divider").html("<strong>Cholesterol</strong> " + round(cholesterol) + cholesterol.unit);
             appendToModal(addCholesterol);
@@ -101,7 +102,7 @@ $(document).ready(function() {
             appendToModal(addSodium);
             addCarbs = $("<p>").addClass("carbs small-divider").html("<strong>Total Carbohydrate</strong> " + round(carbs.value) + carbs.unit);
             appendToModal(addCarbs);
-            addFiber = $("<p>").addClass("fiber small-divider sm-indent").html("Dietary Fiber " + round(fiber.value) +fiber.unit);
+            addFiber = $("<p>").addClass("fiber small-divider sm-indent").html("Dietary Fiber " + roundHalf(fiber.value) +fiber.unit);
             appendToModal(addFiber);
             addSugar = $("<p>").addClass("sugar small-divider sm-indent").html("Sugars " + round(sugar.value) + sugar.unit);
             appendToModal(addSugar);
@@ -126,12 +127,27 @@ $(document).ready(function() {
     });
 
     function round(value) {
-      var number = Math.round(parseInt(value));
+      var number = parseFloat(value) ;
       if(isNaN(number)) {
         return 0;
       } else {
-        return number;        
+        return Math.round(number);        
       }
+    }
+
+    function roundHalf(value) {
+      var number = parseFloat(value) ;
+      if(isNaN(number)) {
+        return 0;
+      } else {
+        return Math.round(number*2)/2;        
+      }
+    }
+
+    function parseUnitOfMeasure(value) {
+      var unitOfMeasure = /\d+\.+\d/.exec(value);
+      var roundedUom = roundHalf(unitOfMeasure);
+      return value.replace(unitOfMeasure, roundedUom);
     }
 
     function appendToModal(nutrient) {
