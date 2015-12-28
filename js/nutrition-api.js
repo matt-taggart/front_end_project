@@ -33,7 +33,7 @@ $(document).ready(function() {
 
     function buildTable(foodData) {
       var itemList = foodData.list.item;
-      var foodGroup, foodName, checkbox, newDiv, createButton, addButton, floatingButton, ndbNumber, createTable, categoryHeading, nameHeading, tr, headTr;
+      var foodGroup, foodName, checkbox, input, label, appendCheckbox, newDiv, createButton, addButton, floatingButton, ndbNumber, createTable, categoryHeading, nameHeading, tr, headTr;
       $("table").addClass("bordered centered bg-white responsive-table");
       categoryHeading = $("<th>").html("Category");
       nameHeading = $("<th>").html("Name");
@@ -42,7 +42,9 @@ $(document).ready(function() {
       for (var i = 0; i < itemList.length; i++) {
         foodGroup = $("<td>").html(itemList[i].group);
         foodName = $("<td>").html(itemList[i].name);
-        checkbox = 
+        // input = $("<input>").attr("type", "checkbox").attr("id", "myCheckbox").addClass("filled-in");
+        // label = $("<label>").attr("for", "myCheckbox");
+        checkbox = $("<p>").append(input).append(label);
         ndbNumber = itemList[i].ndbno;
         newDiv = $("<td>");
         createButton = $("<a>")
