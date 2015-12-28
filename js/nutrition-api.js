@@ -58,7 +58,7 @@ $(document).ready(function() {
     $(document).on('click', '.nutrition', function(e){
       e.preventDefault();
       var ndbNumber = $(this).attr('data-ndbnum');
-      var serving, tableHeading, dailyValueHeader, dividerA, dividerB, dividerC, amountPerServing, calories, totalFat, saturatedFat, transFat, cholesterol, sodium, carbs, fiber, sugar, protein;
+      var serving, tableHeading, dividerA, dividerB, dividerC, amountPerServing, calories, totalFat, saturatedFat, transFat, cholesterol, sodium, carbs, fiber, sugar, protein;
       var addCalories, addFat, addSatFat, addTransFat, addCholesterol, addSodium, addCarbs, addFiber, addSugar, addProtein; 
       $(".modal-content").empty();
       $("#nutrition-facts").openModal();
@@ -89,8 +89,6 @@ $(document).ready(function() {
             appendToModal(addCalories);
             dividerB = $("<p>").addClass("dividerB");
             appendToModal(dividerB);
-            dailyValueHeader = $("<p>").addClass("small-divider indent-dv").html("<strong>% Daily Value</strong>");
-            appendToModal(dailyValueHeader);
             addFat = $("<p>").addClass("total-fat small-divider").html("<strong>Total Fat </strong>" + round(totalFat.value) + totalFat.unit);
             appendToModal(addFat);
             addSatFat = $("<p>").addClass("saturated-fats small-divider sm-indent").html("Saturated Fat " + round(saturatedFat.value) + saturatedFat.unit);

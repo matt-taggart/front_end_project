@@ -13,10 +13,7 @@
     font-size: 25px;
   }
   .lg-indent {
-    margin-left: 80px;
-  }
-  .indent-dv {
-    text-indent: 180px;
+    margin-left: 70px;
   }
 }
 
@@ -36,9 +33,6 @@
   }
   .lg-indent {
     margin-left: 97px;
-  }
-  .indent-dv {
-    text-indent: 185px;
   }
   #nutrition-facts {
     width: 70%;
@@ -62,9 +56,6 @@
   }
   .lg-indent {
     margin-left: 200px;
-  }
-  .indent-dv {
-    text-indent: 325px;
   }
   #nutrition-facts {
     width: 65%;
