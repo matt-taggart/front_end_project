@@ -3,6 +3,7 @@
 <head>
   <title>Gym lifestyle web app</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="">
 <link rel="stylesheet" type="text/css" href="../css/main-page.css">
 <link rel="stylesheet" type="text/css" href="../css/gym-workout-routine.css">
 </head>
@@ -33,7 +34,7 @@
             <p>Equipment: Barbell</p>
           </div>
           <div class="card-action">
-            <a href="#modal-more-info" class="more-info modal-trigger" id="barbell-triceps-extension">More Info</a>
+            <a href="#modal-more-info" class="more-info modal-trigger" id="barbellTricepsExtension">More Info</a>
             <a href="#" class="add-workout pull right" id="add-barbell-triceps-extension">Add to workout list</a>
           </div>
         </div>
@@ -66,9 +67,8 @@
 <div id="modal-more-info" class="modal">
   <div class="modal-content">
     <h4 id="exercise-title"></h4>
-    <p id="exercise-description"></p>
-    <hr>
-    <p id="exercise-equipment"></p>
+    <p id="exercise-description"></p><br>
+    <div id="exercise-equipment"></div>
   </div>
   <div class="modal-footer">
     <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
@@ -79,10 +79,9 @@
 
 
 
-
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="../js/gym-routine-list.js"></script>
-<script type="text/javascript" src="../json/workout-information.json"></script>
+<script type="text/javascript" src="../js/workout-information.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
 </body>
 </html>
