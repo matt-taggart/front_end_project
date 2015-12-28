@@ -3,6 +3,9 @@ $(document).ready(function(){
 
   $('.modal-trigger').leanModal({
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      complete: function() { console.log('Closed');
+        modalReset();
+      } // Callback for Modal close
       });
 
   function getIdMoreInfo(){
@@ -15,18 +18,21 @@ $(document).ready(function(){
 
   function modalAppendExerciseInfo(exerciseId){
     var exerciseTitle = workoutInfo[exerciseId][0].exercise;
-    var exerciseDescription = workoutInfo[exerciseId][1].description
-    var exerciseEqupiment = workoutInfo[exerciseId][1].equipment
+    var exerciseDescription = workoutInfo[exerciseId][1].description;
+    var exerciseEquipment = workoutInfo[exerciseId][2].equipment;
+    var exerciseVideo = workoutInfo[exerciseId][5].workoutVideoUrl;
     $("#exercise-title").append(exerciseTitle);
     $("#exercise-description").append(exerciseDescription);
-    modalReset();
+    $("#exercise-equipment").append(exerciseEquipment);
+    $("#exercise-video").append(exerciseVideo);
   }
 
   function modalReset(){
-    $("#modal-more-info").on("complete",function(){
-      $("#exercise-title").html('');
-    })
-  }
+    $("#exercise-title").empty();
+    $("#exercise-description").empty();
+    $("#exercise-equipment").empty();
+    $("#exercise-video").empty();
+  };
 
   getIdMoreInfo();
 });
