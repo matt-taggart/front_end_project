@@ -13,10 +13,10 @@
     font-size: 25px;
   }
   .lg-indent {
-    margin-left: 80px;
+    margin-left: 70px;
   }
   .indent-dv {
-    text-indent: 180px;
+    text-indent: 165px;
   }
 }
 
@@ -43,7 +43,6 @@
   #nutrition-facts {
     width: 70%;
   }
-
 }
 
 /* Small Devices, Tablets */
