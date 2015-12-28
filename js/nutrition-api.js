@@ -78,41 +78,39 @@ $(document).ready(function() {
             sugar = data.report.foods[i].nutrients[4];
             protein = data.report.foods[i].nutrients[1];            
             tableHeading = $("<h4>").html("Nutrition Facts");
-            $(".modal-content").append(tableHeading);
+            appendToModal(tableHeading);
             serving = $("<p>").addClass("serving-size").html("Serving Size " + data.report.foods[i].measure);
-            $(".modal-content").append(serving);
+            appendToModal(serving);
             dividerA = $("<p>").addClass("dividerA");
-            $(".modal-content").append(dividerA);
+            appendToModal(dividerA);
             amountPerServing = $("<p>").addClass("amount-per-serving small-divider").html("<strong>Amount Per Serving</strong>");
-            $(".modal-content").append(amountPerServing);
+            appendToModal(amountPerServing);
             addCalories = $("<p>").addClass("calories").html("<strong>Calories </strong>" + calories.value + "<span class='lg-indent'>Calories from Fat " + round(totalFat.value*9) + "</span>");
-            $(".modal-content").append(addCalories);
+            appendToModal(addCalories);
             dividerB = $("<p>").addClass("dividerB");
-            $(".modal-content").append(dividerB);
-            dailyValueHeader = $("<p>").addClass("small-divider indent-dv").html("<strong>% Daily Value*</strong>");
-            $(".modal-content").append(dailyValueHeader);
-            addFat = $("<p>").addClass("total-fat small-divider").html("<strong>Total Fat </strong>" + round(totalFat.value) + totalFat.unit + "<span class='indent-fat'>" + round((totalFat.value/20)*100) + "%" + "</span>");
-            $(".modal-content").append(addFat);
-            addSatFat = $("<p>").addClass("saturated-fats small-divider sm-indent").html("Saturated Fat " + round(saturatedFat.value) + saturatedFat.unit + "<span class='indent-sat-fat'>" + round((saturatedFat.value/20)*100) + "%" + "</span>");
-            $(".modal-content").append(addSatFat);
+            appendToModal(dividerB);
+            dailyValueHeader = $("<p>").addClass("small-divider indent-dv").html("<strong>% Daily Value</strong>");
+            appendToModal(dailyValueHeader);
+            addFat = $("<p>").addClass("total-fat small-divider").html("<strong>Total Fat </strong>" + round(totalFat.value) + totalFat.unit);
+            appendToModal(addFat);
+            addSatFat = $("<p>").addClass("saturated-fats small-divider sm-indent").html("Saturated Fat " + round(saturatedFat.value) + saturatedFat.unit);
+            appendToModal(addSatFat);
             addTransFat = $("<p>").addClass("trans-fat small-divider sm-indent").html("Trans Fat " + round(transFat.value) + transFat.unit);
-            $(".modal-content").append(addTransFat);
-            addCholesterol = $("<p>").addClass("cholesterol small-divider").html("<strong>Cholesterol</strong> " + round(cholesterol) + cholesterol.unit + "<span class='indent-cholest'>" + round((totalFat.value/300)*100) + "%" + "</span>");
-            $(".modal-content").append(addCholesterol);
-            addSodium = $("<p>").addClass("sodium small-divider").html("<strong>Sodium</strong> " + round(sodium.value) + sodium.unit + "<span class='indent-sodium'>" + round((totalFat.value/65)*100) + "%" + "</span>");
-            $(".modal-content").append(addSodium);
-            addCarbs = $("<p>").addClass("carbs small-divider").html("<strong>Total Carbohydrate</strong> " + round(carbs.value) + carbs.unit + "<span class='indent-carbs'>" + round((totalFat.value/65)*100) + "%" + "</span>");
-            $(".modal-content").append(addCarbs);
-            addFiber = $("<p>").addClass("fiber small-divider sm-indent").html("Dietary Fiber " + round(fiber.value) + fiber.unit + "<span class='indent-fiber'>" + round((totalFat.value/65)*100) + "%" + "</span>");
-            $(".modal-content").append(addFiber);
+            appendToModal(addTransFat);
+            addCholesterol = $("<p>").addClass("cholesterol small-divider").html("<strong>Cholesterol</strong> " + round(cholesterol) + cholesterol.unit);
+            appendToModal(addCholesterol);
+            addSodium = $("<p>").addClass("sodium small-divider").html("<strong>Sodium</strong> " + round(sodium.value) + sodium.unit);
+            appendToModal(addSodium);
+            addCarbs = $("<p>").addClass("carbs small-divider").html("<strong>Total Carbohydrate</strong> " + round(carbs.value) + carbs.unit);
+            appendToModal(addCarbs);
+            addFiber = $("<p>").addClass("fiber small-divider sm-indent").html("Dietary Fiber " + round(fiber.value) +fiber.unit);
+            appendToModal(addFiber);
             addSugar = $("<p>").addClass("sugar small-divider sm-indent").html("Sugars " + round(sugar.value) + sugar.unit);
-            $(".modal-content").append(addSugar);
+            appendToModal(addSugar);
             addProtein = $("<p>").addClass("protein").html("<strong>Protein</strong> " + round(protein.value) + protein.unit);
-            $(".modal-content").append(addProtein);
+            appendToModal(addProtein);
             dividerC = $("<p>").addClass("dividerC");
-            $(".modal-content").append(dividerC);
-            disclaimer = $("<p>").html("Percent Daily Values are based on a 2,000 calorie diet. Your daily ")
-            $(".modal-content").append
+            appendToModal(dividerC);
           }
         },
         error: function(jqXHR, textstatus, errorThrown) {
@@ -130,7 +128,7 @@ $(document).ready(function() {
     });
 
     function round(value) {
-      var number = Math.round(parseInt(value), 2);
+      var number = Math.round(parseInt(value));
       if(isNaN(number)) {
         return 0;
       } else {
@@ -138,5 +136,8 @@ $(document).ready(function() {
       }
     }
 
-});
+    function appendToModal(nutrient) {
+      $(".modal-content").append(nutrient);
+    }
 
+});
