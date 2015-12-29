@@ -1,4 +1,108 @@
 var workoutInfo = {
+  //EXERCISES FOR ABS
+  "two-handed-kettlebell-swing": [
+        {
+            "exercise": "2 Handed Kettlebell swing"
+        },
+        {
+            "description": "Two handed Russian style kettlebell swing."
+        },
+        {
+            "equipment": "Equipment: Kettlebell"
+        },
+        {
+            "musclesFront": ""
+        },
+        {
+            "musclesBack": ""
+        },
+        {
+            "workoutVideoUrl": '<iframe width="420" height="345" src="https://www.youtube.com/embed/WbaVhD2RJCk"></iframe>'
+        }
+    ],
+    "crunches": [
+        {
+            "exercise": "Crunches"
+        },
+        {
+            "description": "Lay down on your back a soft surface, the feet are on the floor. Ask a partner or use some other help (barbell, etc.) to keep them fixed, your hands are behind your head. From this position move your upper body up till your head or elbows touch your knees. Do this movement by rolling up your back."
+        },
+        {
+            "equipment": "Equipment: Gym mat"
+        },
+        {
+            "musclesFront": ""
+        },
+        {
+            "musclesBack": ""
+        },
+        {
+            "workoutVideoUrl": '<iframe width="420" height="345" src="https://www.youtube.com/embed/NIqgTCTd2MM"></iframe>'
+        }
+    ],
+    "leg-raises-lying": [
+        {
+            "exercise": "Leg Raises, lying"
+        },
+        {
+            "description": "Lay down on a bench and hold onto the recliner with your hands to keep you stable. Hold your legs straight and lift them till they make an angle of about 45°. Make a short pause of 1 sec. and go slowly down to the initial position. To increase the intensity you can make a longer pause of 7 sec. every 5th time."
+        },
+        {
+            "equipment": "Equipment: Gym mat"
+        },
+        {
+            "musclesFront": ""
+        },
+        {
+            "musclesBack": ""
+        },
+        {
+            "workoutVideoUrl": '<iframe width="420" height="345" src="https://www.youtube.com/embed/JB2oyawG9KI"></iframe>'
+        }
+    ],
+    "negative-crunches": [
+        {
+            "exercise": "Negative Crunches"
+        },
+        {
+            "description": "Sit yourself on the decline bench and fix your legs. Cross your arms over the chest and bring with a rolling movement your upper body up, go now without a pause and with a slow movement down again. Don't let your head move during the exercise."
+        },
+        {
+            "equipment": "Equipment: Decline bench"
+        },
+        {
+            "musclesFront": ""
+        },
+        {
+            "musclesBack": ""
+        },
+        {
+            "workoutVideoUrl": '<iframe width="420" height="345" src="https://www.youtube.com/embed/NPttpwI1vdU"></iframe>'
+        }
+    ],
+    "planks": [
+        {
+            "exercise": "Planks"
+        },
+        {
+            "description": "Get into a position on the floor supporting your weight on your forearms and toes. Arms are bent and directly below the shoulder.<br><br>Keep your body straight at all times. This exercise is best performed at time intervals.  15 second sets for low intensity, 30 seconds for medium intensity, and 45 to 60 seconds for high intensity. To increase difficulty an arm or leg can be raised while performing this exercise."
+        },
+        {
+            "equipment": "Equipment: Gym mat"
+        },
+        {
+            "musclesFront": ""
+        },
+        {
+            "musclesBack": ""
+        },
+        {
+            "workoutVideoUrl": '<iframe width="420" height="345" src="https://www.youtube.com/embed/4E1QqHIO_Ys"></iframe>'
+        }
+    ],
+
+  //EXERCISES FOR ARMS
+
     "barbellTricepsExtension": [
         {
             "exercise": "Barbell Triceps Extension"
@@ -10,10 +114,10 @@ var workoutInfo = {
             "equipment": "Equipment: Barbell"
         },
         {
-            "muscles-front": ""
+            "musclesFront": ""
         },
         {
-            "muscles-back": ""
+            "musclesBack": ""
         },
         {
             "workoutVideoUrl": '<iframe width="420" height="345" src="https://www.youtube.com/embed/a2TkTaXagRQ"></iframe>'
@@ -30,10 +134,10 @@ var workoutInfo = {
             "equipment": "Equipment: Barbell, bench"
         },
         {
-            "muscles-front": ""
+            "musclesFront": ""
         },
         {
-            "muscles-back": ""
+            "musclesBack": ""
         },
         {
             "workoutVideoUrl": '<iframe width="420" height="345" src="https://www.youtube.com/embed/Ruy94BZ6FmE"></iframe>'
@@ -50,10 +154,10 @@ var workoutInfo = {
             "equipment": "Equipment: Weight machine with curling bar"
         },
         {
-            "muscles-front": ""
+            "musclesFront": ""
         },
         {
-            "muscles-back": ""
+            "musclesBack": ""
         },
         {
             "workoutVideoUrl": '<iframe width="420" height="345" src="https://www.youtube.com/embed/kyyP5l8noSY"></iframe>'
@@ -70,10 +174,10 @@ var workoutInfo = {
             "equipment": "Equipment: Barbell"
         },
         {
-            "muscles-front": ""
+            "musclesFront": ""
         },
         {
-            "muscles-back": ""
+            "musclesBack": ""
         },
         {
             "workoutVideoUrl": '<iframe width="420" height="345" src="https://www.youtube.com/embed/uO_CNYidOw0"></iframe>'
@@ -90,13 +194,53 @@ var workoutInfo = {
             "equipment": "Equipment: Dumbbell"
         },
         {
-            "muscles-front": ""
+            "musclesFront": ""
         },
         {
-            "muscles-back": ""
+            "musclesBack": ""
         },
         {
             "workoutVideoUrl": '<iframe width="420" height="345" src="https://www.youtube.com/embed/av7-8igSXTs"></iframe>'
+        }
+    ],
+    "dips": [
+        {
+            "exercise": "Dips"
+        },
+        {
+            "description": "Hold onto the bars at a narrow place (if they are not parallel) and press yourself up, but don't stretch the arms completely, so the muscles stay during the whole exercise under tension. Now bend the arms and go down as much as you can, keeping the elbows always pointing back, At this point, you can make a short pause before repeating the movement. Dips can target the chest or triceps depending on your form."
+        },
+        {
+            "equipment": "Equipment: Dips Machine"
+        },
+        {
+            "musclesFront": ""
+        },
+        {
+            "musclesBack": ""
+        },
+        {
+            "workoutVideoUrl": '<iframe width="420" height="345" src="https://www.youtube.com/embed/wjUmnZH528Y"></iframe>'
+        }
+    ],
+    "dumbbell-incline-curl": [
+        {
+            "exercise": "Dumbbell Incline Curl"
+        },
+        {
+            "description": "With elbows back to sides, raise one dumbbell and rotate forearm until forearm is vertical and palm faces shoulder. Lower to original position and repeat with opposite arm. Continue to alternate between sides."
+        },
+        {
+            "equipment": "Equipment: Dumbbell"
+        },
+        {
+            "musclesFront": ""
+        },
+        {
+            "musclesBack": ""
+        },
+        {
+            "workoutVideoUrl": '<iframe width="420" height="345" src="https://www.youtube.com/embed/GeyjGyrOPp4"></iframe>'
         }
     ]
 }
