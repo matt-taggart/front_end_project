@@ -2,20 +2,15 @@ $(document).ready(function(){
   $(".add-workout").on("click", function(){
     var workoutExerciseIdForList = $(this).attr("id");
     console.log(workoutExerciseIdForList);
-    getWorkoutInfoForList(workoutExerciseIdForList)
-    //workoutListAppend(workoutExerciseIdForList);
+    workoutListAppend(workoutExerciseIdForList);
   });
 
-  function getWorkoutInfoForList(workoutExerciseIdForList){
-    var getWorkoutId = $(workoutExerciseIdForList).siblings();
-    console.log(getWorkoutId);
+  function workoutListAppend(workoutExerciseIdForList){
+    var workoutName = workoutInfo[workoutExerciseIdForList][0].exercise;
+    var newTd = $("<td>");
+    var workoutNameAppend = $(newTd).append(workoutName);
+    $("#workout-append").append(workoutNameAppend);
   };
-
-
-  /*function workoutListAppend(workoutExerciseIdForList){
-    newTd = $("<td>")
-
-  };*/
 
 
 
