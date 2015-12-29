@@ -242,5 +242,211 @@ var workoutInfo = {
         {
             "workoutVideoUrl": '<iframe width="420" height="345" src="https://www.youtube.com/embed/GeyjGyrOPp4"></iframe>'
         }
-    ]
+    ],
+  //EXERCISES FOR BACK
+    "chin-ups": [
+          {
+              "exercise": "Chin Ups"
+          },
+          {
+              "description": "Like pull-ups but with a reverse grip.  Palms should be facing towards you instead of away."
+          },
+          {
+              "equipment": "Equipment: Pull up bar"
+          },
+          {
+              "musclesFront": ""
+          },
+          {
+              "musclesBack": ""
+          },
+          {
+              "workoutVideoUrl": '<iframe width="420" height="345" src="https://www.youtube.com/embed/iUNoLR0pYjY"></iframe>'
+          }
+      ],
+      "hyperextension": [
+          {
+              "exercise": "Hyperextension"
+          },
+          {
+              "description": "Lay on the hyperextension pad with the belly button just at the leading edge, the upper body can hang freely. Tense your whole back's muscles and bring your upper body up till it is horizontal, but not more. Go slowly down and don't relax your muscles."
+          },
+          {
+              "equipment": "Equipment: Pull up bar"
+          },
+          {
+              "musclesFront": ""
+          },
+          {
+              "musclesBack": ""
+          },
+          {
+              "workoutVideoUrl": '<iframe width="420" height="345" src="https://www.youtube.com/embed/O8d8I7-qtGg"></iframe>'
+          }
+      ],
+      "long-pulley": [
+          {
+              "exercise": "Long Pully (low row)"
+          },
+          {
+              "description": "Sit down, put your feet on the supporting points and grab the bar with a wide grip. Pull the weight with a rapid movement towards your belly button, not upper. Keep your arms and elbows during the movement close to your body. Your shoulders are pulled together. Let the weight slowly down till your arms are completely stretched."
+          },
+          {
+              "equipment": "Equipment: Row machine"
+          },
+          {
+              "musclesFront": ""
+          },
+          {
+              "musclesBack": ""
+          },
+          {
+              "workoutVideoUrl": '<iframe width="420" height="345" src="https://www.youtube.com/embed/4bt4UqGKHvE"></iframe>'
+          }
+      ],
+      "straight-arm-pull-down": [
+          {
+              "exercise": "Straight Arm Pull Down"
+          },
+          {
+              "description": "Use the straight bar attachment on a high pulley. Grasp the two ends of the bar with your palms facing downward and your arms straight out in front of you. Pull your hands down towards your hips, while keeping your arms straight, then raise them back up to the starting position."
+          },
+          {
+              "equipment": "Equipment: Straight bar on a high pulley"
+          },
+          {
+              "musclesFront": ""
+          },
+          {
+              "musclesBack": ""
+          },
+          {
+              "workoutVideoUrl": '<iframe width="420" height="345" src="https://www.youtube.com/embed/r34PR1mxzmU"></iframe>'
+          }
+      ],
+
+    //EXERCISES FOR CHEST
+    "bench-press": [
+          {
+              "exercise": "Bench Press"
+          },
+          {
+              "description": "Lay down on a bench, the bar should be directly above your eyes, the knees are somewhat angled and the feet are firmly on the floor. Concentrate, breath deeply and grab the bar more than shoulder wide. Bring it slowly down till it briefly touches your chest at the height of your nipples. Push the bar up.<br><br>If you train with a high weight it is advisable to have a spotter that can help you up if you can't lift the weight on your own.<br><br>A wide grip on the bar will work the outer chest muscles, and a narrow grip with work the inner chest muscles.<br><br><strong>NOTE: Always have a spotter for higher weights.</strong>"
+          },
+          {
+              "equipment": "Equipment: Barbell and bench"
+          },
+          {
+              "musclesFront": ""
+          },
+          {
+              "musclesBack": ""
+          },
+          {
+              "workoutVideoUrl": '<iframe width="420" height="345" src="https://www.youtube.com/embed/gRVjAtPip0Y"></iframe>'
+          }
+      ],
+      "bench-press-dumbbells": [
+          {
+              "exercise": "Bench Press Dumbbells"
+          },
+          {
+              "description": "The movement is very similar to benchpressing with a barbell, however, the weight is brought down to the chest at a lower point.<br><br>Hold two dumbbells and lay down on a bench. Hold the weights next to the chest, at the height of your nipples and press them up till the arms are stretched. Let the weight slowly and controlled down."
+          },
+          {
+              "equipment": "Equipment: Barbell and bench"
+          },
+          {
+              "musclesFront": ""
+          },
+          {
+              "musclesBack": ""
+          },
+          {
+              "workoutVideoUrl": '<iframe width="420" height="345" src="https://www.youtube.com/embed/pFcU-d5uDmM"></iframe>'
+          }
+      ],
+      "incline-pushups": [
+          {
+              "exercise": "Incline Pushups"
+          },
+          {
+              "description": "Regular push with a 30 degree incline."
+          },
+          {
+              "equipment": "Equipment: Slightly elevated surface to push on"
+          },
+          {
+              "musclesFront": ""
+          },
+          {
+              "musclesBack": ""
+          },
+          {
+              "workoutVideoUrl": '<iframe width="420" height="345" src="https://www.youtube.com/embed/Z0bRiVhnO8Q"></iframe>'
+          }
+      ],
+
+    //EXERCISES FOR LEGS
+      "braced-squats": [
+          {
+              "exercise": "Braced Squat"
+          },
+          {
+              "description": "Stand with feet slightly wider than shoulder-width apart, while standing as tall as you can.<br><br>Grab a weight plate and hold it out in front of your body with arms straight out. Keep your core tight and stand with a natural arch in your back.<br><br>Now, push hips back and bend knees down into a squat as far as you can. Hold for a few moments and bring yourself back up to the starting position."
+          },
+          {
+              "equipment": "Equipment: Weight plate"
+          },
+          {
+              "musclesFront": ""
+          },
+          {
+              "musclesBack": ""
+          },
+          {
+              "workoutVideoUrl": '<iframe width="420" height="345" src="https://www.youtube.com/embed/iKvhcD5iEVI"></iframe>'
+          }
+      ],
+      "squats": [
+          {
+              "exercise": "Squats"
+          },
+          {
+              "description": "Be sure that the bar is positioned on the squat rack at a comfortable height to pick it up and put it down.<br><br>Pick up the bar by placing it behind the head and below the neck just behind your shoulders, and feet are roughly shoulder width apart. Slowly squat while ensuring that your knees do not bend beyond your toes. Squat until your knees are roughly a 90 degree angle, then push back up."
+          },
+          {
+              "equipment": "Equipment: Barbell and squat rack"
+          },
+          {
+              "musclesFront": ""
+          },
+          {
+              "musclesBack": ""
+          },
+          {
+              "workoutVideoUrl": '<iframe width="420" height="345" src="https://www.youtube.com/embed/UXJrBgI2RxA"></iframe>'
+          }
+      ],
+    //EXERCISES FOR SHOULDERS
+    "arnold-shoulder-press": [
+          {
+              "exercise": "Arnold Shoulder Press"
+          },
+          {
+              "description": "While sitting straight up on a bench, hold dumbbells straight up with elbows at 90 degree angles, and slowly push up."
+          },
+          {
+              "equipment": "Equipment: Bench and dumbbells"
+          },
+          {
+              "musclesFront": ""
+          },
+          {
+              "musclesBack": ""
+          },
+          {
+              "workoutVideoUrl": '<iframe width="420" height="345" src="https://www.youtube.com/embed/vj2w851ZHRM"></iframe>'
+          }
+      ],
 }
