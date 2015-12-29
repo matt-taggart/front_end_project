@@ -3,12 +3,10 @@
 <head>
   <title>Gym lifestyle web app</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
-<link rel="stylesheet" type="text/css" href="">
 <link rel="stylesheet" type="text/css" href="../css/main-page.css">
 <link rel="stylesheet" type="text/css" href="../css/gym-workout-routine.css">
 </head>
 <body>
-
 <div id="header">Workout Selector</div>
 <br>
 <div class="row">
@@ -20,12 +18,91 @@
       <li class="tab col s2"><a href="#chestTab">Chest</a></li>
       <li class="tab col s2"><a href="#legsTab">Legs</a></li>
       <li class="tab col s2"><a href="#shouldersTab">Shoulders</a></li>
+      <li class="tab col s2"><a href="#workoutTab">Workout List</a></li>
     </ul>
   </div>
-  <div id="absTab" class="col s12 m12">Abs</div>
+  <div id="absTab" class="col s12 m12">
+    <div class="row">
+      <div class="col s8 m8">
+        <div class="card white">
+          <div class="card-content black-text">
+            <span class="card-title">2 Handed Kettle Bell Swing</span>
+            <hr>
+            <p>Two handed Russian style kettlebell swing.</p>
+            <br />
+            <p>Equipment: Barbell</p>
+          </div>
+          <div class="card-action">
+            <a href="#modal-more-info" class="more-info modal-trigger" id="two-handed-kettlebell-swing">More Info</a>
+            <a href="#!" class="add-workout pull right" id="two-handed-kettlebell-swing">Add to list</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s8 m8">
+        <div class="card white">
+          <div class="card-content black-text">
+            <span class="card-title">Crunches</span>
+            <hr>
+            <p>Lay down on your back a soft surface, the feet are on the floor. Ask a partner or use some other help (barbell, etc.) to keep them fixed, your hands are behind your head. From this position move your upper body up till your head or elbows touch your knees. Do this movement by rolling up your back.</p>
+            <br />
+            <p>Equipment: Gym mat</p>
+          </div>
+          <div class="card-action">
+            <a href="#modal-more-info" class="more-info modal-trigger" id="crunches">More Info</a>
+            <a href="#!" class="add-workout pull right" id="add-crunches">Add to list</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s8 m8">
+        <div class="card white">
+          <div class="card-content black-text">
+            <span class="card-title">Leg Raises, lying</span>
+            <hr>
+            <p>Lay down on a bench and hold onto the recliner with your hands to keep you stable. Hold your legs straight and lift them till they make an angle of about 45 degrees. Make a short pause of 1 sec. and go slowly down to the initial position. To increase the intensity you can make a longer pause of 7 sec. every 5th time.</p>
+            <br />
+            <p>Equipment: Gym mat</p>
+          </div>
+          <div class="card-action">
+            <a href="#modal-more-info" class="more-info modal-trigger" id="leg-raises-lying">More Info</a>
+            <a href="#!" class="add-workout pull right" id="add-leg-raises-lying">Add to list</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s8 m8">
+        <div class="card white">
+          <div class="card-content black-text">
+            <span class="card-title">Negative Crunches</span>
+            <hr>
+            <p>Sit yourself on the decline bench and fix your legs. Cross your arms over the chest and bring with a rolling movement your upper body up, go now without a pause and with a slow movement down again. Don't let your head move during the exercise.</p>
+            <br />
+            <p>Equipment: Decline bench</p>
+          </div>
+          <div class="card-action">
+            <a href="#modal-more-info" class="more-info modal-trigger" id="negative-crunches">More Info</a>
+            <a href="#!" class="add-workout pull right" id="add-negative-crunches">Add to list</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s8 m8">
+        <div class="card white">
+          <div class="card-content black-text">
+            <span class="card-title">Planks</span>
+            <hr>
+            <p>Get into a position on the floor supporting your weight on your forearms and toes. Arms are bent and directly below the shoulder.<br><br>Keep your body straight at all times. This exercise is best performed at time intervals.  15 second sets for low intensity, 30 seconds for medium intensity, and 45 to 60 seconds for high intensity. To increase difficulty an arm or leg can be raised while performing this exercise.</p>
+            <br />
+            <p>Equipment: Gym mat</p>
+          </div>
+          <div class="card-action">
+            <a href="#modal-more-info" class="more-info modal-trigger" id="planks">More Info</a>
+            <a href="#!" class="add-workout pull right" id="add-planks">Add to list</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div id="armsTab" class="col s12">
     <div class="row">
-      <div class="col s12 m6">
+      <div class="col s8 m8">
         <div class="card white">
           <div class="card-content black-text">
             <span class="card-title">Barbell Triceps Extension</span>
@@ -36,73 +113,125 @@
           </div>
           <div class="card-action">
             <a href="#modal-more-info" class="more-info modal-trigger" id="barbellTricepsExtension">More Info</a>
-            <a href="#" class="add-workout pull right" id="add-barbell-triceps-extension">Add to workout list</a>
+            <a href="#!" class="add-workout pull right" id="add-barbell-triceps-extension">Add to list</a>
           </div>
         </div>
       </div>
-      <div class="col s12 m6">
+      <div class="col s8 m8">
         <div class="card white">
           <div class="card-content black-text">
             <span class="card-title modal-trigger">Bench press narrow grip</span>
+            <hr>
             <p>Lay down on a bench, the bar is directly over your eyes, the knees form a slight angle and the feet are firmly on the ground. Hold the bar with a narrow grip (around 20cm.). Lead the weight slowly down till the arms are parallel to the floor (elbow: right angle), press then the bar up. When bringing the bar down, don't let it down on your nipples as with the regular bench pressing, but somewhat lower.</p>
             <br />
             <p>Equipment: Barbell, bench</p>
           </div>
           <div class="card-action">
             <a href="#modal-more-info" class="more-info modal-trigger" id="bench-press-narrow-grip">More Info</a>
-            <a href="#" class="add-workout pull right" id="bench-press-narrow-grip">Add to workout list</a>
+            <a href="#!" class="add-workout pull right" id="add-bench-press-narrow-grip">Add to list</a>
           </div>
         </div>
       </div>
-      <div class="col s12 m6">
+      <div class="col s8 m8">
         <div class="card white">
           <div class="card-content black-text">
             <span class="card-title modal-trigger">Biceps curl with cable</span>
+            <hr>
             <p>Stand around 30 - 40cm away from the cable, the feet are firmly on the floor. Take the bar and lift the weight with a fast movements. Lower the weight as with the dumbbell curls slowly and controlled. <strong>NOTE: Do not move elbows during exercise!</strong></p>
             <br />
             <p>Equipment: Weight machine with curling bar</p>
           </div>
           <div class="card-action">
             <a href="#modal-more-info" class="more-info modal-trigger" id="biceps-curl-with-cable">More Info</a>
-            <a href="#" class="add-workout pull right" id="add-biceps-curl-with-cable">Add to workout list</a>
+            <a href="#!" class="add-workout pull right" id="add-biceps-curl-with-cable">Add to list</a>
           </div>
         </div>
       </div>
-      <div class="col s12 m6">
+      <div class="col s8 m8">
         <div class="card white">
           <div class="card-content black-text">
             <span class="card-title modal-trigger">Biceps curl with barbell</span>
+            <hr>
             <p>Hold the Barbell shoulder-wide, the back is straight, the shoulders slightly back, the arms are streched. Bend the arms, bringing the weight up, with a fast movement. Without pausing, let down the bar with a slow and controlled movement.<br><br>Don't allow your body to swing during the exercise, all work is done by the biceps, which are the only mucles that should move (pay attention to the elbows).</p>
             <br />
             <p>Equipment: Barbell</p>
           </div>
           <div class="card-action">
             <a href="#modal-more-info" class="more-info modal-trigger" id="biceps-curl-with-barbell">More Info</a>
-            <a href="#" class="add-workout pull right" id="add-biceps-curl-with-barbell">Add to workout list</a>
+            <a href="#!" class="add-workout pull right" id="add-biceps-curl-with-barbell">Add to list</a>
           </div>
         </div>
       </div>
-      <div class="col s12 m6">
+      <div class="col s8 m8">
         <div class="card white">
           <div class="card-content black-text">
             <span class="card-title modal-trigger">Biceps curl with dumbbell</span>
+            <hr>
             <p>Hold two barbells, the arms are streched, the hands are on your side, the palms face inwards. Bend the arms and bring the weight with a fast movement up. At the same time, rotate your arms by 90 degrees at the very beginning of the movement. At the highest point, rotate a little the weights further outwards. Without a pause, bring them down, slowly.<br><br>Don't allow your body to swing during the exercise, all work is done by the biceps, which are the only mucles that should move (pay attention to the elbows).</p>
             <br />
             <p>Equipment: Dumbell</p>
           </div>
           <div class="card-action">
             <a href="#modal-more-info" class="more-info modal-trigger" id="biceps-curl-with-dumbbell">More Info</a>
-            <a href="#" class="add-workout pull right" id="add-biceps-curl-with-dumbbell">Add to workout list</a>
+            <a href="#!" class="add-workout pull right" id="add-biceps-curl-with-dumbbell">Add to list</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s8 m8">
+        <div class="card white">
+          <div class="card-content black-text">
+            <span class="card-title modal-trigger">Dips</span>
+            <hr>
+            <p>Hold onto the bars at a narrow place (if they are not parallel) and press yourself up, but don't stretch the arms completely, so the muscles stay during the whole exercise under tension. Now bend the arms and go down as much as you can, keeping the elbows always pointing back, At this point, you can make a short pause before repeating the movement. Dips can target the chest or triceps depending on your form.</p>
+            <br />
+            <p>Equipment: Dips Machine</p>
+          </div>
+          <div class="card-action">
+            <a href="#modal-more-info" class="more-info modal-trigger" id="dips">More Info</a>
+            <a href="#!" class="add-workout pull right" id="add-dips">Add to list</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s8 m8">
+        <div class="card white">
+          <div class="card-content black-text">
+            <span class="card-title modal-trigger">Dumbbell Incline Curl</span>
+            <hr>
+            <p>With elbows back to sides, raise one dumbbell and rotate forearm until forearm is vertical and palm faces shoulder. Lower to original position and repeat with opposite arm. Continue to alternate between sides.</p>
+            <br />
+            <p>Equipment: Dumbbell</p>
+          </div>
+          <div class="card-action">
+            <a href="#modal-more-info" class="more-info modal-trigger" id="dumbbell-incline-curl">More Info</a>
+            <a href="#!" class="add-workout pull right" id="add-dumbbell-incline-curl">Add to list</a>
           </div>
         </div>
       </div>
     </div>
     </div>
   </div>
-  <div id="backTab" class="col s12">Back</div>
-  <div id="chestTab" class="col s12">Chest</div>
-  <div id="legsTab" class="col s12">Legs</div>
-  <div id="shouldersTab" class="col s12">Shoulders</div>
+  <div id="backTab" class="col s12 m12">Back</div>
+  <div id="chestTab" class="col s12 m12">Chest</div>
+  <div id="legsTab" class="col s12 m12">Legs</div>
+  <div id="shouldersTab" class="col s12 m12">Shoulders</div>
+  <div id="workoutTab" class="col s12 m12">
+    <table>
+        <thead>
+          <tr>
+              <th data-field="workout-name">Workout</th>
+              <th data-field="workout-reps">Reps</th>
+              <th data-field="workout-sets">Sets</th>
+              <th data-field="workout-weight">Weight</th>
+              <th data-field="workout-complete">Completed?</th>
+              <th data-field="workout-remove"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="workout-append">
+          </tr>
+        </tbody>
+      </table>
+  </div>
 </div>
 
 <!-- Modal Structure -->
@@ -119,13 +248,10 @@
   </div>
 </div>
         
-
-
-
-
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
 <script type="text/javascript" src="../js/gym-routine-list.js"></script>
 <script type="text/javascript" src="../js/workout-information.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+<script type="text/javascript" src="../js/workout-list.js"></script>
 </body>
 </html>
