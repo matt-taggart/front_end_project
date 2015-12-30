@@ -10,7 +10,7 @@
   color: #fff;
 }
 
-p {
+.light {
   line-height: 2rem;
   color: #fff;
 }
@@ -22,3 +22,4 @@ p {
 .header {
   color: #fff;
 }
+
