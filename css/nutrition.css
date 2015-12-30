@@ -1,0 +1,109 @@
+body {
+  background: url("restaurant_icons.png");
+}
+
+.container {
+  margin-bottom: 50px;
+}
+
+/*f9f4ed*/
+
+#food-search {
+  margin-bottom: 25px;
+}
+
+h4 {
+  margin-bottom: -15px;
+}
+
+.serving-size {
+  margin-bottom: -10px;
+}
+
+.amount-per-serving {
+  font-size: 12px;
+}
+
+.calories {
+  margin-bottom: -10px;
+  margin-top: 15px;
+}
+
+.dividerA {
+  padding: 8px;
+  background: black;
+  margin-bottom: -7px;
+}
+
+.dividerB {
+  padding: 4px;
+  background: black;
+  margin-bottom: -7px;
+}
+
+.dividerC {
+  padding: 8px;
+  background: black;
+  margin-top: -10px;
+}
+
+.small-divider {
+  margin-bottom: -7px;
+  border-bottom: 1px solid black;
+}
+
+.bg-white {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+td {
+  width: 300px;
+  white-space: normal;
+}
+
+.header-text {
+  font-size: 12px;
+}
+
+.sm-indent {
+  text-indent: 20px;
+}
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+ color: #00bcd4;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+ border-bottom: 1px solid #00bcd4;
+ box-shadow: 0 1px 0 0 #00bcd4;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+ color: #00bcd4;
+}
+
+.fixed {
+  position: fixed;
+}
+
+::-webkit-input-placeholder {
+  color: #808080;
+}
+
+:-moz-placeholder {
+  color: #808080;
+}
+
+::-moz-placeholder {
+  color: #808080;
+}
+
+:-ms-input-placeholder {
+  color: #808080;
+}

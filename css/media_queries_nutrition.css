@@ -1,0 +1,86 @@
+ /* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+  .panel-header {
+    font-size: 35px;
+  }
+  .panel-header-text {
+    font-size: 16px;
+  }
+  .modal-content {
+    font-size: 12px;
+  }
+  h4 {
+    font-size: 25px;
+  }
+  .lg-indent {
+    margin-left: 70px;
+  }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+  .panel-header {
+    font-size: 37px;
+  }
+  .panel-header-text {
+    font-size: 16.5px;
+  }
+  .modal-content {
+    font-size: 12.5px;
+  }
+  h4 {
+    font-size: 27px;
+  }
+  .lg-indent {
+    margin-left: 97px;
+  }
+  #nutrition-facts {
+    width: 70%;
+  }
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .panel-header {
+    font-size: 40px;
+  }
+  .panel-header-text {
+    font-size: 18px;
+  }
+  .modal-content {
+    font-size: 16px;
+  }
+  h4 {
+    font-size: 35px;
+  }
+  .lg-indent {
+    margin-left: 200px;
+  }
+  #nutrition-facts {
+    width: 65%;
+  }
+
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  .panel-header {
+    font-size: 45px;
+  }
+  .panel-header-text {
+    font-size: 20px;
+  }
+  #nutrition-facts {
+    width: 50%;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  #nutrition-facts {
+    width: 45%; 
+  }
+
+}
