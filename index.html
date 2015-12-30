@@ -4,6 +4,8 @@
   <title>I Don't Know</title>
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/nutrition.css">
+  <link rel="stylesheet" type="text/css" href="css/media_queries_nutrition.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
@@ -75,12 +77,11 @@
       <div class="container">
         <div class="row valign-wrapper"> 
           <div class="input-field col s6 valign">
-            <i class="material-icons prefix">location_on</i>
-            <input id="icon_prefix" type="text" class="validate">
-            <label for="icon_prefix">Search Fitness Center</label>
+            <input type="text" class="validate">
+            <label>Search Fitness Center</label>
           </div>
           <div class="col s6">
-            <button class="btn waves-effect waves-light" type="submit" name="action">Search<i class="material-icons right">search</i></button>
+            <a class="btn-floating btn-large waves-effect waves-light #00bcd4"><i class="material-icons">location_on</i></a>
           </div>
         </div>
           <div class="col s12 center">
@@ -101,12 +102,7 @@
         </div>
       </div>
       <div class="container">
-        <div class="row valign-wrapper"> 
-          <div class="input-field col s6 valign">
-            <i class="material-icons prefix">location_on</i>
-            <input id="icon_prefix" type="text" class="validate">
-            <label for="icon_prefix">Search Fitness Center</label>
-          </div>
+        <div class="row"> 
           <div class="col s6">
             <button class="btn waves-effect waves-light" type="submit" name="action">Search<i class="material-icons right">search</i></button>
           </div>
@@ -120,6 +116,49 @@
   </div>
    <div class="parallax-container">
     <div class="parallax"><img src="http://xdesktopwallpapers.com/wp-content/uploads/2012/12/A%20Healthy%20Diet%20For%20You.jpg"></div>
+  </div>
+  <div class="grey darken-4">
+    <div class="section">
+      <div class="row">
+        <div class="container nutrition-container">
+          <div class="row">
+            <div class="col s12">
+              <div class="card-panel cyan">
+                <h3 class="white-text panel-header">Food Search</h3>
+                  <span class="white-text panel-header-text flow-text">Use our database to find out which foods are right for you and your diet.  Knowing these macro nutrients will help you understand what you are eating on a daily basis and help build a nutrition plan that will optimize your results in the gym. </span>
+              </div>
+            </div>
+          </div>
+          <div class="row">    
+            <div class="input-field col s12" id="food-input-field">
+              <i class="material-icons prefix">search</i>
+              <input placeholder="Pizza, steak, rice, turkey, etc." id="food" type="text" class="validate" />
+              <label for="food">Keyword</label>
+            </div>     
+          </div>
+          <div class="row">
+            <div class="col s12 center-align">
+              <a class="waves-effect waves-light btn cyan" id="food-search">Search</a>
+            </div>
+          </div>
+          <div>
+            <table>
+              <thead>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Modal Structure -->
+        <div id="nutrition-facts" class="modal modal-fixed-footer">
+          <div class="modal-content"></div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
 
@@ -141,7 +180,8 @@
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
-  <script src="js/jquery.runner-min.js" type="text/javascript"></script>
+  <!--<script src="js/jquery.runner-min.js" type="text/javascript"></script>-->
+  <script type="text/javascript" src="js/nutrition-api.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
