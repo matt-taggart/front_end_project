@@ -3,7 +3,7 @@ var apiKey = "rHkKtH6RMPiYlFkjl3jBGWpfcEJB3ZMqkyZmAxHK";
 $(document).ready(function() {
 
   $("#food-search").on("click", function(e) {
-      var search = $("input:text").val();    
+      var search = $(".food-input-field:text").val();    
       e.preventDefault();
       $("thead").empty();
       $("tbody").empty();
