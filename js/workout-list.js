@@ -24,13 +24,12 @@ $(document).ready(function(){
                                      .append(removeWorkoutButton);
     $("#workout-append").append(workoutAppendToTr);
 
-    checkboxHandler();
-    //removeWorkoutHandler();
-
-
-    $("#filled-in-box").on("click",function(){
-      
+    $("#filled-in-box").click(function(){
+      var thisFilledInBox = $(this).attr("workouttype");
+      checkboxHandler(workoutExerciseIdForList);
     });
+
+    removeWorkoutHandler();
 
     $(workoutAppend).on("click", function(){
       modalAppendExerciseInfo(workoutExerciseIdForList);
@@ -38,15 +37,23 @@ $(document).ready(function(){
 
   };
 
-  function checkboxHandler(){
-    $("#filled-in-box").on("click",function(){
-      var thisFilledInBox = $(this).attr("workouttype");
+  function checkboxHandler(workoutExerciseIdForList){
+    $("#filled-in-box").on("click",workoutExerciseIdForList,function(){
+      console.log(thisFilledInBox);
       var congratsMessage = ["Your power level is truly over 9000", "You better be sure to bring your tickets to the gun show", "What has two thumbs and huge biceps? This guy (or girl 8-) )", "You have come one stepped closer to getting yoked. Make sure to eat something healthy!", "You have successfully picked things up AND put them down"];
       var randomArray = Math.floor((Math.random()*5));
       $("#congrats-message").html(congratsMessage[randomArray]).fadeOut(4500);
       $(thisFilledInBox).attr("ischecked","checked").attr("disabled","disabled");
     });
+    };
+
+  function removeWorkoutHandler(){
+    $('.waves-effect').on('click' , function(){
+      $(this).closest('tr').remove();
+    });
   };
+
+  });
 
 
 
@@ -71,4 +78,4 @@ $(document).ready(function(){
     $("#exercise-video").append(exerciseVideo);
   }*/
 
-});
+//});
