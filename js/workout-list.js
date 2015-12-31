@@ -14,7 +14,7 @@ $(document).ready(function(){
     var repAppend = $("<td>").append('<div class="input-field"><input id="reps" type="text" class="validate"><label for="reps"></label></div>');
     var setAppend = $("<td>").append('<div class="input-field"><input id="sets" type="text" class="validate"><label for="sets"></label></div>');
     var weightAppend = $("<td>").append('<div class="input-field"><input id="weight" type="text" class="validate"><label for="weight"></label></div>');
-    var completeButtonAppend = $("<td>").append('<input type="checkbox" class="filled-in" id="filled-in-box" ischecked="unchecked" workouttype='+workoutExerciseIdForList+' /><label for="filled-in-box"></label>');
+    var completeButtonAppend = $("<td>").append('<input type="checkbox" class="workoutCheckbox" id='+workoutExerciseIdForList+'-checkbox /><label for='+workoutExerciseIdForList+'-checkbox></label>');
     var removeWorkoutButton = $("<td>").append('<a class="waves-effect waves-light red btn">X</a>');
     var workoutAppendToTr = $("<tr>").append(workoutAppend)
                                      .append(repAppend)
@@ -24,11 +24,8 @@ $(document).ready(function(){
                                      .append(removeWorkoutButton);
     $("#workout-append").append(workoutAppendToTr);
 
-    $("#filled-in-box").click(function(){
-      var thisFilledInBox = $(this).attr("workouttype");
-      checkboxHandler(workoutExerciseIdForList);
-    });
 
+    checkboxHandler();
     removeWorkoutHandler();
 
     $(workoutAppend).on("click", function(){
@@ -37,15 +34,14 @@ $(document).ready(function(){
 
   };
 
-  function checkboxHandler(workoutExerciseIdForList){
-    $("#filled-in-box").on("click",workoutExerciseIdForList,function(){
-      console.log(thisFilledInBox);
+  function checkboxHandler(){
+    $(".workoutCheckbox").on("click", function(){
       var congratsMessage = ["Your power level is truly over 9000", "You better be sure to bring your tickets to the gun show", "What has two thumbs and huge biceps? This guy (or girl 8-) )", "You have come one stepped closer to getting yoked. Make sure to eat something healthy!", "You have successfully picked things up AND put them down"];
       var randomArray = Math.floor((Math.random()*5));
       $("#congrats-message").html(congratsMessage[randomArray]).fadeOut(4500);
-      $(thisFilledInBox).attr("ischecked","checked").attr("disabled","disabled");
-    });
-    };
+      $(this).attr("disabled","disabled");
+  });
+  };
 
   function removeWorkoutHandler(){
     $('.waves-effect').on('click' , function(){
