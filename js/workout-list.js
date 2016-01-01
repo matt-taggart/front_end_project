@@ -26,7 +26,6 @@ $(document).ready(function(){
 
 
     checkboxHandler();
-    completeMessage();
     removeWorkoutHandler();
 
     $(workoutAppend).on("click", function(){
@@ -38,18 +37,15 @@ $(document).ready(function(){
   function checkboxHandler(){
     $(".workoutCheckbox").on("click", function(){
       $(this).attr("disabled","disabled");
-      $(this).parent().next().remove();
-    });
-  };
+      $(this).parent().next().empty();
+      completeMessage();
+      });
+    };
 
   function completeMessage(){
-    var thisCompletedSet = $(".workoutCheckbox").attr("id");
-    console.log(thisCompletedSet);
-    $(thisCompletedSet).on("click", function(){
-      var congratsMessage = ["Your power level is truly over 9000", "You better be sure to bring your tickets to the gun show", "What has two thumbs and huge biceps? This guy (or girl 8-) )", "You have come one stepped closer to getting yoked. Make sure to eat something healthy!", "You have successfully picked things up AND put them down"];
-      var randomArray = Math.floor((Math.random()*5));
-      $("#congrats-message").html(congratsMessage[randomArray]).fadeOut(4500);
-    });
+    var congratsMessage = ["Your power level is truly over 9000", "You better be sure to bring your tickets to the gun show", "What has two thumbs and huge biceps? This guy (or girl 8-) )", "You have come one stepped closer to getting yoked. Make sure to eat something healthy!", "You have successfully picked things up AND put them down"];
+    var randomArray = Math.floor((Math.random()*5));
+    $("#congrats-message").html(congratsMessage[randomArray]).fadeOut(4500);
   };
 
   function removeWorkoutHandler(){
