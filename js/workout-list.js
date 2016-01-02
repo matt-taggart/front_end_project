@@ -3,7 +3,7 @@ $(document).ready(function(){
   //Get the name of the workout to append to the workout list
 
   $(".add-workout").on("click", function(){
-    var workoutExerciseIdForList = $(this).attr("id");
+    var workoutExerciseIdForList = $(this).prev().attr("id");
     console.log(workoutExerciseIdForList);
     workoutListAppend(workoutExerciseIdForList);
   });
@@ -90,5 +90,4 @@ $(document).ready(function(){
       };
     });
   };
-
 });
