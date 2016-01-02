@@ -20,3 +20,12 @@
 #congrats-message {
   text-align: center;
 }
+
+td {
+  width:16%;
+  height: 77px;
+}
+
+.waves-light {
+  text-align: left;
+}

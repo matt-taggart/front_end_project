@@ -30,19 +30,9 @@ $(document).ready(function(){
     enterToSubmitReps(workoutExerciseIdForList);
     enterToSubmitSets(workoutExerciseIdForList);
     enterToSubmitWeight(workoutExerciseIdForList);
-    checkboxHandler();
+    fieldIsEmpty(workoutExerciseIdForList, workoutName);
     removeWorkoutHandler();
   };
-
-  //Upon clicking checkbox, checkbox is disabled and the remove button is deleted
-
-  function checkboxHandler(){
-    $(".workoutCheckbox").on("click", function(){
-      $(this).attr("disabled","disabled");
-      $(this).parent().next().empty();
-      completeMessage();
-      });
-    };
 
   //An engaging message is displayed to the user
 
@@ -58,13 +48,19 @@ $(document).ready(function(){
     });
   };
 
+  //The next three functions enable user to submit their workout goals by hitting the enter button, and checks to make sure that the entry is numeric only
+
   function enterToSubmitReps(workoutExerciseIdForList){
     $("#reps-"+workoutExerciseIdForList).on("keydown", function(e) {
       if (e.keyCode == 13) {
         var repAmount = $(this).val();
         console.log(repAmount);
-        $(this).closest('td').append(repAmount);
-        $(this).closest('div').remove();
+        if ($.isNumeric(repAmount)) {
+          $(this).closest('td').append(repAmount);
+          $(this).closest('div').remove();
+        } else {
+          alert("Please enter a number!");
+        };
       };
     });
   };
@@ -74,8 +70,12 @@ $(document).ready(function(){
       if (e.keyCode == 13) {
         var setAmount = $(this).val();
         console.log(setAmount);
-        $(this).closest('td').append(setAmount);
-        $(this).closest('div').remove();
+        if ($.isNumeric(setAmount)) {
+          $(this).closest('td').append(setAmount);
+          $(this).closest('div').remove();
+        } else {
+          alert("Please enter a number!");
+        };
       };
     });
   };
@@ -85,9 +85,39 @@ $(document).ready(function(){
       if (e.keyCode == 13) {
         var weightAmount = $(this).val();
         console.log(weightAmount);
-        $(this).closest('td').append(weightAmount);
-        $(this).closest('div').remove();
+        if ($.isNumeric(weightAmount)) {
+          $(this).closest('td').append(weightAmount);
+          $(this).closest('div').remove();
+        } else {
+          alert("Please enter a number!");
+        }
       };
+    });
+  };
+
+  //Upon clicking checkbox, checkbox is disabled and the remove button is deleted
+
+  function checkboxHandler(workoutExerciseIdForList){
+    $("#"+workoutExerciseIdForList+"-checkbox").on("click", function(){
+      $(this).attr("disabled","disabled");
+      $(this).parent().next().empty();
+      completeMessage();
+      });
+    };
+
+  //Makes sure that all fields are filled out before submitting
+
+  function fieldIsEmpty(workoutExerciseIdForList, workoutName){
+    $("#"+workoutExerciseIdForList+"-checkbox").on("click", function(e){
+      var repsEntry = $(this).closest("td").prev().prev().prev().children().children("input").attr("type");
+      var setsEntry = $(this).closest("td").prev().prev().children().children("input").attr("type");
+      var weightEntry = $(this).closest("td").prev().children().children("input").attr("type");
+      if (repsEntry === "text" || setsEntry === "text" || weightEntry === "text") {
+        e.preventDefault();
+        $("#congrats-message").html("Please enter a number for all fields in "+workoutName+"!").fadeOut(5000);
+      } else {
+        checkboxHandler(workoutExerciseIdForList);
+      }
     });
   };
 });
