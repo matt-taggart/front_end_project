@@ -1,7 +1,5 @@
 $(document).on("ready",function(){
 
-  
-
   //Get the name of the workout to append to the workout list
 
   $(".add-workout").on("click", function(){
@@ -42,7 +40,7 @@ $(document).on("ready",function(){
 
     $("#name-"+workoutExerciseIdForList).on("click", function(){
       console.log($(this).attr("id"));
-      
+      modalAppendExerciseInfoListLink(workoutExerciseIdForList);
     });
   };
 
@@ -132,4 +130,15 @@ $(document).on("ready",function(){
       }
     });
   };
+
+  function modalAppendExerciseInfoListLink(workoutExerciseIdForList){
+    var exerciseTitle = workoutInfo[workoutExerciseIdForList][0].exercise;
+    var exerciseDescription = workoutInfo[workoutExerciseIdForList][1].description;
+    var exerciseEquipment = workoutInfo[workoutExerciseIdForList][2].equipment;
+    var exerciseVideo = workoutInfo[workoutExerciseIdForList][5].workoutVideoUrl;
+    $("#exercise-title").append(exerciseTitle);
+    $("#exercise-description").append(exerciseDescription);
+    $("#exercise-equipment").append(exerciseEquipment);
+    $("#exercise-video").append(exerciseVideo);
+  }
 });
