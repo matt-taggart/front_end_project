@@ -38,7 +38,7 @@ $(document).ready(function() {
       categoryHeading = $("<th>").html("Category");
       nameHeading = $("<th>").html("Name");
       headTr = $("<tr>").append(categoryHeading).append(nameHeading);
-      $("thead").addClass("centered").append(headTr);       
+      $("thead").addClass("centered cyan").append(headTr);       
       for (var i = 0; i < itemList.length; i++) {
         foodGroup = $("<td>").html(itemList[i].group);
         foodName = $("<td>").html(itemList[i].name);
