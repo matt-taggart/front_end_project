@@ -1,4 +1,6 @@
-$(document).ready(function(){
+$(document).on("ready",function(){
+
+  
 
   //Get the name of the workout to append to the workout list
 
@@ -12,7 +14,7 @@ $(document).ready(function(){
 
   function workoutListAppend(workoutExerciseIdForList){
     var workoutName = workoutInfo[workoutExerciseIdForList][0].exercise;
-    var workoutNameLink = $("<a>").attr("href","#modal-more-info").attr("id",workoutExerciseIdForList).addClass("modal-trigger").append(workoutName);
+    var workoutNameLink = $("<a>").attr("href","#modal-more-info").attr("id","name-"+workoutExerciseIdForList).addClass("modal-trigger").append(workoutName);
     var workoutAppend = $("<td>").append(workoutNameLink);
     var repAppend = $("<td>").append('<div class="input-field"><input class="formReps" id="reps-'+workoutExerciseIdForList+'" type="text" class="validate"><label for="reps-'+workoutExerciseIdForList+'"></label></div>');
     var setAppend = $("<td>").append('<div class="input-field"><input id="sets-'+workoutExerciseIdForList+'" type="text" class="validate"><label for="sets-'+workoutExerciseIdForList+'"></label></div>');
@@ -32,6 +34,16 @@ $(document).ready(function(){
     enterToSubmitWeight(workoutExerciseIdForList);
     fieldIsEmpty(workoutExerciseIdForList, workoutName);
     removeWorkoutHandler();
+
+    $('.modal-trigger').leanModal({
+        dismissible: true, // Modal can be dismissed by clicking outside of the modal
+        complete: function() {modalReset();}
+    });
+
+    $("#name-"+workoutExerciseIdForList).on("click", function(){
+      console.log($(this).attr("id"));
+      
+    });
   };
 
   //An engaging message is displayed to the user
