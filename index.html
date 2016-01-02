@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="css/nutrition.css">
   <link rel="stylesheet" type="text/css" href="css/media_queries_nutrition.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 </head>
 <body>
   <div class="navbar-fixed">
@@ -118,43 +118,40 @@
   </div>
   <div class="back">
     <div class="section">
-      <div class="row">
-        <div class="container nutrition-container">
-          <div class="row">
-            <div class="col s12">
-              <div class="card-panel cyan">
-                <h3 class="white-text panel-header">Food Search</h3>
-                  <span class="white-text panel-header-text flow-text">Use our database to find out which foods are right for you and your diet.  Knowing these macro nutrients will help you understand what you are eating on a daily basis and help build a nutrition plan that will optimize your results in the gym. </span>
-              </div>
+      <div class="container nutrition-container">
+        <div class="row">
+          <div class="col s12">
+            <div class="card-panel cyan">
+              <h3 class="white-text panel-header">Food Search</h3>
+                <span class="white-text panel-header-text flow-text">Use our database to find out which foods are right for you and your diet.  Knowing these macro nutrients will help you understand what you are eating on a daily basis and help build a nutrition plan that will optimize your results in the gym. </span>
             </div>
-          </div>
-          <div class="row">    
-            <div class="input-field col s12" id="food-input-field">
-              <i class="material-icons prefix">search</i>
-              <input placeholder="Pizza, steak, rice, turkey, etc." id="food" type="text" class="validate" />
-              <label for="food">Keyword</label>
-            </div>     
-          </div>
-          <div class="row">
-            <div class="col s12 center-align">
-              <a class="waves-effect waves-light btn cyan" id="food-search">Search</a>
-            </div>
-          </div>
-          <div>
-            <table>
-              <thead class="cyan">
-              </thead>
-              <tbody>
-              </tbody>
-            </table>
           </div>
         </div>
-        <!-- Modal Structure -->
-        <div id="nutrition-facts" class="modal modal-fixed-footer">
-          <div class="modal-content"></div>
-          <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        <div class="row">    
+          <div class="input-field col s12" id="food-color">
+            <i class="material-icons prefix">search</i>
+            <input placeholder="Pizza, steak, rice, turkey, etc." type="text" class="validate food-input-field" />
+          </div>     
+        </div>
+        <div class="row">
+          <div class="col s12 center-align">
+            <a class="waves-effect waves-light btn cyan" id="food-search">Search</a>
           </div>
+        </div>
+        <div>
+          <table>
+            <thead>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- Modal Structure -->
+      <div id="nutrition-facts" class="modal modal-fixed-footer">
+        <div class="modal-content"></div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
         </div>
       </div>
     </div>
