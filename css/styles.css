@@ -35,3 +35,8 @@
   opacity: 0;
 }
 
+#rounded {
+  height: 100px;
+  border-radius: 10px;
+}
+
