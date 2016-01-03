@@ -3,8 +3,8 @@ var apiKey = "rHkKtH6RMPiYlFkjl3jBGWpfcEJB3ZMqkyZmAxHK";
 $(document).ready(function() {
 
   $("#food-search").on("click", function(e) {
-      var search = $(".food-input-field:text").val();    
-      e.preventDefault();
+      e.preventDefault();    
+      var search = $(".food-input-field:text").val(); 
       $("thead").empty();
       $("tbody").empty();
 
@@ -29,6 +29,7 @@ $(document).ready(function() {
           console.log(errorThrown);
         }
       });
+
   });
 
     function buildTable(foodData) {
