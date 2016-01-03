@@ -19,7 +19,7 @@ $(document).ready(function() {
 
       $.ajax({
         type: "GET",
-        url: "http://api.nal.usda.gov/ndb/search/?" + $.param(foodSearchParams),
+        url: "https://api.nal.usda.gov/ndb/search/?" + $.param(foodSearchParams),
         success: function(data) {
             var foodList = buildTable(data);           
         },
@@ -68,7 +68,7 @@ $(document).ready(function() {
       $("#nutrition-facts").openModal();
       $.ajax({
         type: "GET",
-        url: "http://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=" + apiKey + "&nutrients=205&nutrients=204&nutrients=208&nutrients=269&nutrients=606&nutrients=605&nutrients=601&nutrients=268&nutrients=307&nutrients=291&nutrients=203&ndbno=" + ndbNumber,
+        url: "https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=" + apiKey + "&nutrients=205&nutrients=204&nutrients=208&nutrients=269&nutrients=606&nutrients=605&nutrients=601&nutrients=268&nutrients=307&nutrients=291&nutrients=203&ndbno=" + ndbNumber,
         success: function(data) {
           for (var i = 0; i < data.report.foods.length; i++) {
             calories = data.report.foods[i].nutrients[9];
