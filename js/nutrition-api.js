@@ -3,11 +3,10 @@ var apiKey = "rHkKtH6RMPiYlFkjl3jBGWpfcEJB3ZMqkyZmAxHK";
 $(document).ready(function() {
 
   $("#food-search").on("click", function(e) {
-      e.preventDefault();    
-      var search = $(".food-input-field:text").val(); 
+    e.preventDefault();    
+    var search = $(".food-input-field:text").val(); 
       $("thead").empty();
       $("tbody").empty();
-
       var foodSearchParams = {
         "format": "json",
         "q": search,
@@ -16,7 +15,6 @@ $(document).ready(function() {
         "offset": 0,
         "api_key": apiKey
       }
-
       $.ajax({
         type: "GET",
         url: "http://api.nal.usda.gov/ndb/search/?" + $.param(foodSearchParams),
@@ -29,7 +27,6 @@ $(document).ready(function() {
           console.log(errorThrown);
         }
       });
-
   });
 
     function buildTable(foodData) {
