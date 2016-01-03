@@ -22,7 +22,7 @@
           <li><a href="#about-row" class="animated fadeIn Left about">About</a></li>
           <li><a href="#gym-row" class="animated fadeInLeft gym" >Gym Locator</a></li>
           <li><a href="#workout-row" class="animated fadeInLeft workout">Workouts</a></li>
-          <li><a href="#nut-row" class="animated fadeInRight nutrit">Nutrition</a></li>
+          <li><a href="#nutrit-row" class="animated fadeInRight nutrit">Nutrition</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
           <li><a href="about.html">About</a></li>
@@ -130,20 +130,22 @@
     <div class="section">
       <div class="container nutrition-container">
         <div class="row">
-          <div class="col s12">
-            <div class="card-panel cyan">
-              <h3 class="white-text panel-header">Food Search</h3>
+          <div class="hideme" id="nutrit-row">
+            <div class="col s12">
+              <div class="card-panel cyan">
+                <h3 class="white-text panel-header">Food Search</h3>
                 <span class="white-text panel-header-text flow-text">Use our database to find out which foods are right for you and your diet.  Knowing these macro nutrients will help you understand what you are eating on a daily basis and help build a nutrition plan that will optimize your results in the gym. </span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="row">    
+        <div class="row hideme">    
           <div class="input-field col s12" id="food-color">
             <i class="material-icons prefix">search</i>
             <input placeholder="Pizza, steak, rice, turkey, etc." type="text" class="validate food-input-field" />
           </div>     
         </div>
-        <div class="row">
+        <div class="row hideme">
           <div class="col s12 center-align">
             <a class="waves-effect waves-light btn cyan" id="food-search">Search</a>
           </div>
@@ -157,14 +159,16 @@
           </table>
         </div>
       </div>
-      <!-- Modal Structure -->
-      <div id="nutrition-facts" class="modal modal-fixed-footer">
-        <div class="modal-content"></div>
-        <div class="modal-footer">
-          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
-        </div>
+    </div>
+  </div>
+  <!-- Modal Structure -->
+  <div id="nutrition-facts" class="modal modal-fixed-footer">
+    <div class="modal-content"></div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
       </div>
     </div>
+  </div>
  
 
 
