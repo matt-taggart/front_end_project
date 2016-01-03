@@ -27,29 +27,26 @@ $(document).on("ready",function(){
                                      .append(removeWorkoutButton);
     $("#workout-append").append(workoutAppendToTr);
 
-    enterToSubmitReps(workoutExerciseIdForList);
-    enterToSubmitSets(workoutExerciseIdForList);
-    enterToSubmitWeight(workoutExerciseIdForList);
+    workoutAppendToTr.find('.modal-trigger').leanModal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      complete: function() { modalReset(); } // Callback for Modal close
+    });
+
+    enterToSubmitReps(workoutExerciseIdForList, workoutName);
+    enterToSubmitSets(workoutExerciseIdForList, workoutName);
+    enterToSubmitWeight(workoutExerciseIdForList, workoutName);
     fieldIsEmpty(workoutExerciseIdForList, workoutName);
+    modalGetId(workoutExerciseIdForList);
     removeWorkoutHandler();
-
-    $('.modal-trigger').leanModal({
-        dismissible: true, // Modal can be dismissed by clicking outside of the modal
-        complete: function() {modalReset();}
-    });
-
-    $("#name-"+workoutExerciseIdForList).on("click", function(){
-      console.log($(this).attr("id"));
-      modalAppendExerciseInfoListLink(workoutExerciseIdForList);
-    });
   };
 
-  //An engaging message is displayed to the user
+  //An engaging message is displayed to the user upon clicking the box
 
   function completeMessage(){
-    var congratsMessage = ["Your power level is truly over 9000", "You better be sure to bring your tickets to the gun show", "What has two thumbs and huge biceps? This guy (or girl 8-) )", "You have come one stepped closer to getting yoked. Make sure to eat something healthy!", "You have successfully picked things up AND put them down"];
+    var congratsMessage = ["Your power level is truly over 9000", "You better be sure to bring your tickets to the gun show", "What has two thumbs and huge biceps? This guy (or girl 8-) )", "You have come one step closer to getting yoked. Make sure to eat something healthy!", "You have successfully picked things up AND put them down"];
     var randomArray = Math.floor((Math.random()*5));
-    $("#congrats-message").html(congratsMessage[randomArray]).fadeOut(4500);
+    $("#congrats-message").html(congratsMessage[randomArray])
+    setTimeout(function(){$("#congrats-message").empty()}, 3000);
   };
 
   function removeWorkoutHandler(){
@@ -60,7 +57,7 @@ $(document).on("ready",function(){
 
   //The next three functions enable user to submit their workout goals by hitting the enter button, and checks to make sure that the entry is numeric only
 
-  function enterToSubmitReps(workoutExerciseIdForList){
+  function enterToSubmitReps(workoutExerciseIdForList, workoutName){
     $("#reps-"+workoutExerciseIdForList).on("keydown", function(e) {
       if (e.keyCode == 13) {
         var repAmount = $(this).val();
@@ -69,13 +66,14 @@ $(document).on("ready",function(){
           $(this).closest('td').append(repAmount);
           $(this).closest('div').remove();
         } else {
-          alert("Please enter a number!");
+          $("#congrats-message").html("Please enter the number of reps you would like to do for "+workoutName+"!");
+          setTimeout(function(){$("#congrats-message").empty()}, 3000);
         };
       };
     });
   };
 
-  function enterToSubmitSets(workoutExerciseIdForList){
+  function enterToSubmitSets(workoutExerciseIdForList, workoutName){
     $("#sets-"+workoutExerciseIdForList).on("keydown", function(e) {
       if (e.keyCode == 13) {
         var setAmount = $(this).val();
@@ -84,13 +82,14 @@ $(document).on("ready",function(){
           $(this).closest('td').append(setAmount);
           $(this).closest('div').remove();
         } else {
-          alert("Please enter a number!");
+          $("#congrats-message").html("Please enter the number of sets you would like to do for "+workoutName+"!");
+          setTimeout(function(){$("#congrats-message").empty()}, 3000);
         };
       };
     });
   };
 
-  function enterToSubmitWeight(workoutExerciseIdForList){
+  function enterToSubmitWeight(workoutExerciseIdForList, workoutName){
     $("#weight-"+workoutExerciseIdForList).on("keydown", function(e) {
       if (e.keyCode == 13) {
         var weightAmount = $(this).val();
@@ -99,7 +98,8 @@ $(document).on("ready",function(){
           $(this).closest('td').append(weightAmount);
           $(this).closest('div').remove();
         } else {
-          alert("Please enter a number!");
+          $("#congrats-message").html("Please enter the weight you would like to do for "+workoutName+"!");
+          setTimeout(function(){$("#congrats-message").empty()}, 3000);
         }
       };
     });
@@ -108,11 +108,9 @@ $(document).on("ready",function(){
   //Upon clicking checkbox, checkbox is disabled and the remove button is deleted
 
   function checkboxHandler(workoutExerciseIdForList){
-    $("#"+workoutExerciseIdForList+"-checkbox").on("click", function(){
-      $(this).attr("disabled","disabled");
-      $(this).parent().next().empty();
+      $("#"+workoutExerciseIdForList+"-checkbox").attr("disabled","disabled");
+      $("#"+workoutExerciseIdForList+"-checkbox").parent().next().empty();
       completeMessage();
-      });
     };
 
   //Makes sure that all fields are filled out before submitting
@@ -124,10 +122,18 @@ $(document).on("ready",function(){
       var weightEntry = $(this).closest("td").prev().children().children("input").attr("type");
       if (repsEntry === "text" || setsEntry === "text" || weightEntry === "text") {
         e.preventDefault();
-        $("#congrats-message").html("Please enter a number for all fields in "+workoutName+"!").fadeOut(5000);
+        $("#congrats-message").html("Please enter a number for all fields in "+workoutName+"!");
+        setTimeout(function(){$("#congrats-message").empty()}, 3000);
       } else {
         checkboxHandler(workoutExerciseIdForList);
       }
+    });
+  };
+
+  function modalGetId(workoutExerciseIdForList){
+    $("#name-"+workoutExerciseIdForList).on("click", function(){
+      console.log($(this).attr("id"));
+      modalAppendExerciseInfoListLink(workoutExerciseIdForList);
     });
   };
 
@@ -141,4 +147,11 @@ $(document).on("ready",function(){
     $("#exercise-equipment").append(exerciseEquipment);
     $("#exercise-video").append(exerciseVideo);
   }
+
+  function modalReset(){
+    $("#exercise-title").empty();
+    $("#exercise-description").empty();
+    $("#exercise-equipment").empty();
+    $("#exercise-video").empty();
+  };
 });
