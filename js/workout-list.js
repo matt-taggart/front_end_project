@@ -6,6 +6,8 @@ $(document).on("ready",function(){
     var workoutExerciseIdForList = $(this).prev().attr("id");
     console.log(workoutExerciseIdForList);
     workoutListAppend(workoutExerciseIdForList);
+    $("#congrats-message").html('Workout added')
+    setTimeout(function(){$("#congrats-message").empty()},2000)
   });
 
   //Append all necessary elements to workout list
