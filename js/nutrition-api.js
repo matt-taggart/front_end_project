@@ -37,13 +37,8 @@ $(document).ready(function() {
       $("table").addClass("bordered centered bg-white responsive-table");
       categoryHeading = $("<th>").html("Category");
       nameHeading = $("<th>").html("Name");
-<<<<<<< HEAD
-      headTr = $("<tr>").append(categoryHeading).append(nameHeading);
-      $("thead").addClass("centered cyan").append(headTr);       
-=======
       headTr = $("<tr>").append(categoryHeading).append(nameHeading).append("<th></th>");
       $("thead").addClass("centered").append(headTr);       
->>>>>>> 3ae17f003ec8b7e9dd7e29f611dc417a2206a072
       for (var i = 0; i < itemList.length; i++) {
         foodGroup = $("<td>").html(itemList[i].group);
         foodName = $("<td>").html(itemList[i].name);
