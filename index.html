@@ -4,163 +4,236 @@
   <title>I Don't Know</title>
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
   <link rel="stylesheet" type="text/css" href="css/nutrition.css">
   <link rel="stylesheet" type="text/css" href="css/media_queries_nutrition.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 </head>
 <body>
-  <div class="navbar-fixed">
-    <nav>
-      <div class="nav-wrapper grey darken-4">
-        <a href="#!" class="brand-logo">Logo</a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="# about.html">About</a></li>
-          <li><a href="# gymlocate.html">Gym Locator</a></li>
-          <li><a href="# workout.html">Workouts</a></li>
-          <li><a href="# nutritions.html">Nutrition</a></li>
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-          <li><a href="about.html">About</a></li>
-          <li><a href="# gymlocate.html">Gym Locator</a></li>
-          <li><a href="# workout.html">Workouts</a></li>
-          <li><a href="nutrtions.html">Nutrition</a></li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-  <div class="parallax-container">
-    <div class="parallax"><img src="http://aaldenwallace.com/wp-content/uploads/2014/07/ALDEN-WALLACE-OAKLEY-TRAINING-140310-4238.jpg"></div>
-  </div>
-  <!--ABOUT-->
-  <div class="grey darken-4">
-    <div class="container">
+  <header>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper grey darken-4">
+          <div class="animated fadeInRight">
+            <a href="#!" class="brand-logo cyan-text">GYMtrition</a>
+          </div>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+            <li><a href="#about-row" class="animated fadeInLeft about">About</a></li>
+            <li><a href="#gym-row" class="animated fadeInLeft gym" >Gym Locator</a></li>
+            <li><a href="#workout-row" class="animated fadeInLeft workout">Workouts</a></li>
+            <li><a href="#nutrit-row" class="animated fadeInLeft nutrit">Nutrition</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li><a href="#about-row">About</a></li>
+            <li><a href="#gym-row">Gym Locator</a></li>
+            <li><a href="#workout-row">Workouts</a></li>
+            <li><a href="#nutrit-row">Nutrition</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="parallax-container">
+      <div class="parallax"><img src="http://aaldenwallace.com/wp-content/uploads/2014/07/ALDEN-WALLACE-OAKLEY-TRAINING-140310-4238.jpg"></div>
+    </div>
+
+    <!--ABOUT-->
+
+    <div class="grey darken-4">
+      <div class="container">
+        <div class="section">
+          <div class="row">
+            <div class="hideme" id="about-row">
+              <div class="col s12 m4">
+                <div class="icon-block">
+                  <h2 class="center"><i class="material-icons cyan-text">location_on</i></h2>
+                  <h5 class="center">Find Fitness Center</h5>
+                  <p class="light">Our Google Maps API allows you to find the nearest gym no matter where you are. All you need to do is to type in your location into the search bar and and it will show all of the gyms near your location. There is no excuse for skipping the gym even if you are out of town for vacation or business. Click the button below if you want to start looking for a gym.</p>
+                </div>
+              </div>
+              <div class="col s12 m4">
+                <div class="icon-block">
+                  <h2 class="center"><i class="material-icons cyan-text">assignment</i></h2>
+                  <h5 class="center">Use Our Workout List </h5>
+                  <p class="light">You found a gym, GREAT! Now go workout and have fun. Oh you do not know any workouts or tired of your old routine? Don't worry we provided a list of workouts categorized by muscle groups. We have a myraid of different excersises for you if you want to do your arms, legs, or abs. Click the button below if you want to see our list of workouts.</p>
+                </div>
+              </div>
+              <div class="col s12 m4">
+                <div class="icon-block">
+                  <h2 class="center"><i class="material-icons cyan-text">search</i></h2>
+                  <h5 class="center">Look Up Nutrition Facts</h5>
+                  <p class="light">You just killed your workout but you need to fuel up, TACO BELL. Hey it's your body go for it, but you should check the nutrition facts in that burritto. We have a nutrition API that allows you to search any food and it show the nutrition facts for that food. So you may want to think twice in eating Taco Bell after the gym, click the button below to look it up or any food.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+    <div class="parallax-container">
+      <div class="parallax"><img src="http://mb.cision.com/Public/7368/9474606/a8ced898a30fbcdd_org.jpg"></div>
+    </div>
+
+    <!--FIND FITNESS CENTER-->
+
+    <div class="grey darken-4">
       <div class="section">
         <div class="row">
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center"><i class="material-icons">location_on</i></h2>
-              <h5 class="center">Find Fitness Center</h5>
-              <p class="light">Our Google Maps API allows you to find the nearest gym no matter where you are. All you need to do is to type in your location into the search bar and and it will show all of the gyms near your location. There is no excuse for skipping the gym even if you are out of town for vacation or business. Click the button below if you want to start looking for a gym.</p>
-            </div>
-          </div>
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center"><i class="material-icons">assignment</i></h2>
-              <h5 class="center">Use Our Workout List </h5>
-              <p class="light">You found a gym, GREAT! Now go workout and have fun. Oh you do not know any workouts or tired of your old routine? Don't worry we provided a list of workouts categorized by muscle groups. We have a myraid of different excersises for you if you want to do your arms, legs, or abs. Click the button below if you want to see our list of workouts.</p>
-            </div>
-          </div>
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <h2 class="center"><i class="material-icons">search</i></h2>
-              <h5 class="center">Look Up Nutrition Facts</h5>
-              <p class="light">You just killed your workout but you need to fuel up, TACO BELL. Hey it's your body go for it, but you should check the nutrition facts in that burritto. We have a nutrition API that allows you to search any food and it show the nutrition facts for that food. So you may want to think twice in eating Taco Bell after the gym, click the button below to look it up or any food.</p>
+          <div class="hideme" id="gym-row">
+            <div class="col s12">
+              <h1 class="header cyan-text">Find Fitness Center</h1>
             </div>
           </div>
         </div>
-      </div>
-    </div> 
-  </div>
-  <div class="parallax-container">
-    <div class="parallax"><img src="http://thewenetwork.org/wp-content/uploads/2014/08/1girl-training-sport-boxing-punches-bandages-hd-wallpaper-1050x700.jpg"></div>
-  </div>
-  <!--Find Gym-->
-  <div class="grey darken-4">
-    <div class="section">
-      <div class="row">
-        <div class="col s12">
-          <h1 class="header">Find Fitness Center</h1>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row valign-wrapper"> 
-          <div class="input-field col s6 valign">
-            <input placeholder="Search Place" id="search_place" type="text" class="validate">
+        <div class="container hideme">
+          <div class="row valign-wrapper"> 
+            <div class="input-field col s6 valign">
+              <input placeholder="Search Place" id="search_place" type="text" class="validate">
+            </div>
+            <div class="col s6">
+              <a class="btn-floating btn-large waves-effect waves-light cyan"><i class="material-icons">location_on</i></a>
           </div>
-          <div class="col s6">
-            <a class="btn-floating btn-large waves-effect waves-light #00bcd4"><i class="material-icons">location_on</i></a>
           </div>
-        </div>
           <div class="col s12 center">
             <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="parallax-container">
-    <div class="parallax"><img src="http://cdn.blog.dickssportinggoods.com/wp-content/uploads/2015/02/Fitnessband_GettyImages_Thomas_Barwick.jpg"></div>
-  </div>
-  <div class="grey darken-4">
-    <div class="section">
-      <div class="row">
-        <div class="col s12">
-          <h1 class="header">Find Fitness Center</h1>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row"> 
-          <div class="col s6">
-            <button class="btn waves-effect waves-light" type="submit" name="action">Search<i class="material-icons right">search</i></button>
-          </div>
-        </div>
-          <div class="col s12 center">
-            <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-          </div>
-        </div>
-      </div>
+    <div class="parallax-container">
+      <div class="parallax"><img src="http://cdn.blog.dickssportinggoods.com/wp-content/uploads/2015/02/Fitnessband_GettyImages_Thomas_Barwick.jpg"></div>
     </div>
-  </div>
-   <div class="parallax-container">
-    <div class="parallax"><img src="http://xdesktopwallpapers.com/wp-content/uploads/2012/12/A%20Healthy%20Diet%20For%20You.jpg"></div>
-  </div>
-  <div class="grey darken-4">
-    <div class="section">
-      <div class="container nutrition-container">
+  
+    <!--FIND WORKOUTS-->
+
+    <div class="grey darken-4">
+      <div class="section">
         <div class="row">
-          <div class="col s12">
-            <div class="card-panel cyan">
-              <h3 class="white-text panel-header">Food Search</h3>
-                <span class="white-text panel-header-text flow-text">Use our database to find out which foods are right for you and your diet.  Knowing these macro nutrients will help you understand what you are eating on a daily basis and help build a nutrition plan that will optimize your results in the gym. </span>
+          <div class="hideme" id="workout-row">
+            <div class="col s12">
+              <h1 class="header cyan-text">Create Your Own Workout Routine</h1>
             </div>
           </div>
         </div>
-        <div class="row test">    
-          <div class="input-field col s12" id="food-color">
-            <i class="material-icons prefix">search</i>
-            <input placeholder="Pizza, steak, rice, turkey, etc." type="text" class="validate food-input-field"/>
-          </div>  
-        </div>
-        <div class="row">
-          <div class="col s12 center-align">
-            <a class="waves-effect waves-light btn cyan" id="food-search">Search</a>
+        <div class="container hideme">
+          <div class="row"> 
+            <div class="col s12 center">
+              <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+            </div>
+            <div class="row center"> 
+              <a class="btn waves-effect waves-light cyan" href="html/gym-workout-selector.html">Workouts</a>
+            </div>
           </div>
-        </div>
-        <div>
-          <table>
-            <thead>
-            </thead>
-            <tbody>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <!-- Modal Structure -->
-      <div id="nutrition-facts" class="modal modal-fixed-footer">
-        <div class="modal-content"></div>
-        <div class="modal-footer">
-          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
         </div>
       </div>
     </div>
- 
+    <div class="parallax-container">
+      <div class="parallax"><img src="http://www.validfeedback.com/uploads/companyprofile/products/original/healthy_life1439985518.jpg"></div>
+    </div>
 
+    <!--NUTRITION SECTION-->
 
+    <div class="grey darken-4">
+      <div class="section">
+        <div class="container nutrition-container">
+          <div class="row">
+            <div class="hideme" id="nutrit-row">
+              <div class="col s12">
+                <div class="card-panel cyan">
+                  <h3 class="white-text panel-header">Food Search</h3>
+                    <span class="white-text panel-header-text flow-text">Use our database to find out which foods are right for you and your diet.  Knowing these macro nutrients will help you understand what you are eating on a daily basis and help build a nutrition plan that will optimize your results in the gym. </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row hideme">    
+            <div class="input-field col s12" id="food-color">
+              <i class="material-icons prefix">search</i>
+              <input placeholder="Pizza, steak, rice, turkey, etc." type="text" class="validate food-input-field" />
+            </div>     
+            </div>
+            <div class="row hideme">
+              <div class="col s12 center-align">
+                <a class="waves-effect waves-light btn cyan" id="food-search">Search</a>
+              </div>
+            </div>
+            <div>
+              <table>
+                <thead>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL STRUCTURE-->
+
+    <div id="nutrition-facts" class="modal modal-fixed-footer">
+      <div class="modal-content"></div>
+      <div class="modal-footer">
+        <button class="modal-action modal-close waves-effect waves-green btn-flat">Close</button>
+      </div>
+    </div>
+    <div class="parallax-container">
+      <div class="parallax"><img src="http://media.teentimes.com/uploads/2015/06/nike-fitness.jpg"></div>
+      </div>
+  </main>
+
+  <!--FOOTER-->
+
+  <footer class="grey darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">GYMtrition</h5>
+            <p class="grey-text text-lighten-4"> An interactive website that allows you to find gyms, create a workout list, and search for nutritional facts of different food items. GYMtrition was created and designed as a front-end project by students enrolled in Rutgers Coding Bootcamp. The langauges, frameworks, and API's used for to create this website were HTML, CSS, Javascript, jQuery, MaterializeCSS, AJAX, Google Maps, and USDA.</p>
+        </div>
+        <div class="col l6 s12">
+          <h5 class="white-text">Developers</h5>
+          <div class="row center-align">
+            <div class="col 12">
+              <a class="grey-text text-lighten-4" href="https://github.com/moriz23" target="_blank"><img class="responsive-img" id="rounded" src="img/rizvi.jpg"></a>
+              <br>
+              <p class="grey-text text-lighten-4">Mohammed Rizvi</p>
+            </div>
+            <div class="col 12 offset-12">
+              <a class="grey-text text-lighten-4" href="https://github.com/jeffreyhshapiro" target="_blank"><img class="responsive-img" id="rounded" src="http://espn.go.com/photo/2007/0531/nba_g_james5_268.jpg"></a>
+              <br>
+              <p class="grey-text text-lighten-4">Jeff Sharpio</p>
+            </div>
+            <div class="col 12 offset-12">
+              <a class="grey-text text-lighten-4" href="https://github.com/matt-taggart" target="_blank"><img class="responsive-img" id="rounded" src="http://sports.cbsimg.net/images/visual/whatshot/chris-bosh-face.jpg"></a>
+              <br>
+              <p class="grey-text text-lighten-4">Matthew Taggart</p>
+            </div>
+            <div class="col 12 offset-12">
+              <a class="grey-text text-lighten-4" href="https://github.com/ntekal" target="_blank"><img class="responsive-img" id="rounded" src="http://www.troll.me/images/shaq/shaq.jpg"></a>
+              <br>
+              <p class="grey-text text-lighten-4">Neelesh Tekal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright black">
+      <div class="cyan-text">
+      &copy; 2016 GYMtrition
+      </div>
+    </div>
+  </footer>
+  
+>>>>>>> 13929a2b94ce4ad1fb6c1967d5e1a840866a9d77
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
   <!--<script src="js/jquery.runner-min.js" type="text/javascript"></script>-->
+  <script type="text/javascript" src="js/animations.js"></script>
   <script type="text/javascript" src="js/nutrition-api.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
 </body>
