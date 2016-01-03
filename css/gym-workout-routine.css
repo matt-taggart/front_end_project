@@ -19,4 +19,14 @@
 
 #congrats-message {
   text-align: center;
+  height:22px;
+}
+
+td {
+  width:16%;
+  height: 77px;
+}
+
+.waves-light {
+  text-align: left;
 }
