@@ -40,6 +40,10 @@
   border-radius: 10px;
 }
 
+.foot-img:hover {
+  opacity: 0.7;
+}
+
 .about {
   -webkit-animation-delay: 1s;
 }
