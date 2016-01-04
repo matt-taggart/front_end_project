@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Gym lifestyle web app</title>
+  <title>GYMtrition Workout Builder</title>
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
 <link rel="stylesheet" type="text/css" href="../css/gym-workout-routine.css">
 </head>
 <body>
-<div id="header">Workout Selector</div>
+<div id="header" class="row">
+<div id="workoutheader" class="col s6 m6">Workout Selector</div>
+<div class="col s6 m6"><a id="homebutton" href="../index.html" class="waves-effect waves-light btn right"><i class="material-icons right">home</i></a></div>
+</div>
 <br>
 <div class="row">
 <br>
@@ -51,7 +55,7 @@
           </div>
           <div class="card-action">
             <a href="#modal-more-info" class="more-info modal-trigger" id="crunches">More Info</a>
-            <a href="#!" class="add-workout pull right" id="crunches">Add to list</a>
+            <a href="#!" class="add-workout pull right">Add to list</a>
           </div>
         </div>
       </div>
@@ -66,7 +70,7 @@
           </div>
           <div class="card-action">
             <a href="#modal-more-info" class="more-info modal-trigger" id="leg-raises-lying">More Info</a>
-            <a href="#!" class="add-workout pull right" id="leg-raises-lying">Add to list</a>
+            <a href="#!" class="add-workout pull right">Add to list</a>
           </div>
         </div>
       </div>
@@ -81,7 +85,7 @@
           </div>
           <div class="card-action">
             <a href="#modal-more-info" class="more-info modal-trigger" id="negative-crunches">More Info</a>
-            <a href="#!" class="add-workout pull right" id="negative-crunches">Add to list</a>
+            <a href="#!" class="add-workout pull right">Add to list</a>
           </div>
         </div>
       </div>
@@ -398,7 +402,7 @@
   </div>
 </div>
 
-<!-- Modal Structure -->
+<!-- Modal -->
 <div id="modal-more-info" class="modal">
   <div class="modal-content">
     <h4 id="exercise-title"></h4>
@@ -411,7 +415,7 @@
     <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
   </div>
 </div>
-        
+
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
 <script type="text/javascript" src="../js/gym-routine-list.js"></script>
