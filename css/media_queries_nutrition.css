@@ -75,6 +75,9 @@
   #nutrition-facts {
     width: 50%;
   }
+  .brand-logo {
+    margin-left: 20px;
+  }  
 }
 
 /* Large Devices, Wide Screens */
