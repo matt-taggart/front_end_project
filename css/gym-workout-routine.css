@@ -8,9 +8,12 @@
 }
 
 #header {
-  font-size: 4em;
   background-color: blue;
   color: white;
+}
+
+#workoutheader {
+  font-size: 4em;
 }
 
 #exercise-video {
@@ -19,4 +22,18 @@
 
 #congrats-message {
   text-align: center;
+  height:22px;
+}
+
+#homebutton {
+  padding:0px;
+}
+
+td {
+  width:16%;
+  height: 77px;
+}
+
+.waves-light {
+  text-align: left;
 }
