@@ -1,8 +1,8 @@
-## My Frontend Project
+## GYMtrition
 
 ### General Project Summary
 
-Our project will utilize API's to find gyms based on a user's location and will automatically monitor gym traffic to determine the best times to work out.  Another element of the website will be to pull in a sample workout that someone can follow each time they visit their local gym or build their own custom workout.
+Our goal was to provide introductory information when deciding that it's time to get in shape.  Our page is broken into 3 main segments: Locating a gym/fitness center using any given location, developing a workout plan and creating a meal plan that suits an individual's nutritional needs.
 
 
 ### Technologies Used
@@ -14,12 +14,9 @@ http://my.herokuapp.com/
 
 
 ### API's Used
-* Google Maps API
-* Gym Flow API
-* UnderArmour
-* API one - https://developers.google.com/maps/?hl=en
-* API two - http://www.mygymflow.com/api.html
-* API three - https://developer.underarmour.com/
+* Google Maps API - https://developers.google.com/maps/?hl=en
+* USDA - http://www.mygymflow.com/api.html
+
 
 ### Trello Link
 

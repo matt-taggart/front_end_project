@@ -8,6 +8,7 @@
         height: 420px;
         width: 600px;
         margin-bottom: 30px;
+        position: relative;
       }
 
       #resultsTable {
