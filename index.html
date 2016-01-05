@@ -152,8 +152,11 @@
           <div class="row hideme">    
             <div class="input-field col s12" id="food-color">
               <i class="material-icons prefix">search</i>
-              <input placeholder="Pizza, steak, rice, turkey, etc." type="text" class="validate food-input-field" />
+              <input placeholder="Pizza, steak, rice, turkey, etc." type="text" class="food-input-field" />
             </div>     
+            <div id="span-container">
+              <span id="wrong-input"></span>
+            </div>
             </div>
             <div class="row hideme">
               <div class="col s12 center-align">
@@ -161,10 +164,10 @@
               </div>
             </div>
             <div>
-              <table>
-                <thead>
+              <table class="nutrition-table">
+                <thead class="nutrition-table-head">
                 </thead>
-                <tbody>
+                <tbody class="nutrition-table-body">
                 </tbody>
               </table>
             </div>
