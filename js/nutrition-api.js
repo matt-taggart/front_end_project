@@ -35,7 +35,7 @@ $(document).ready(function() {
     function buildTable(foodData) {
       var itemList = foodData.list.item;
       var foodGroup, foodName, checkbox, input, label, appendCheckbox, newDiv, createButton, addButton, floatingButton, ndbNumber, createTable, categoryHeading, nameHeading, tr, headTr;
-      $("table").addClass("bordered centered bg-white responsive-table");
+      $("table").addClass("bordered centered bg-white responsive-table animated fadeIn");
       categoryHeading = $("<th>").html("Category");
       nameHeading = $("<th>").html("Name");
       headTr = $("<tr>").append(categoryHeading).append(nameHeading).append("<th></th>");
