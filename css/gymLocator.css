@@ -6,14 +6,14 @@
       }*/
       #map {
         height: 420px;
+        width: 600px;
+        margin-bottom: 30px;
       }
 
       #resultsTable {
         font-size: 12px;
       }
-      #map {
-        width: 600px;
-      }
+
       #listing {
         position: relative;
         width: 250px;
@@ -76,3 +76,10 @@
         text-align: right;
       }
 
+      #locationField input[type=text] {
+        color: #D9DFDA;
+      }
+
+      .fitness-container {
+        margin-bottom: -20px;
+      }
