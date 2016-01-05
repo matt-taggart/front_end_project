@@ -141,7 +141,7 @@ $(document).ready(function() {
             appendToModal(addTransFat);
             addCholesterol = $("<p>")
                               .addClass("cholesterol small-divider")
-                              .html("<strong>Cholesterol</strong> " + round(cholesterol) + cholesterol.unit);
+                              .html("<strong>Cholesterol</strong> " + round(cholesterol.value) + cholesterol.unit);
             appendToModal(addCholesterol);
             addSodium = $("<p>")
                           .addClass("sodium small-divider")
