@@ -6,18 +6,22 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
 <link rel="stylesheet" type="text/css" href="../css/gym-workout-routine.css">
 </head>
-<body>
-<div id="header" class="row">
-<div id="workoutheader" class="col s9 m9">GYMtrition Workout Builder</div>
-<div class="col s3 m3"><a id="homebutton" href="../index.html" class="waves-effect waves-light btn right"><i class="material-icons right">home</i></a></div>
-</div>
-<br>
-<div class="row">
-<br>
-<div id="congrats-message"></div>
-<br>
+<body id="workout-builder">
+  <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper grey darken-4">
+          <a href="../index.html" class="brand-logo cyan-text">GYMtrition</a>
+          <div class="brand-logo cyan-text right">Workout Builder</div>
+        </div>
+      </nav>
+  </div>
+  <br>
+  <div class="row">
+  <br>
+  <div id="congrats-message"></div>
+  <br>
   <div class="col s12">
-    <ul class="tabs">
+    <ul id="tabs-for-workouts" class="tabs">
       <li class="tab col s2"><a class="active" href="#absTab">Abs</a></li>
       <li class="tab col s2"><a href="#armsTab">Arms</a></li>
       <li class="tab col s2"><a href="#backTab">Back</a></li>
@@ -380,8 +384,24 @@
           </div>
         </div>
       </div>
+      <div class="col s8 m8">
+        <div class="card white">
+          <div class="card-content black-text">
+            <span class="card-title modal-trigger">Front raises</span>
+            <hr>
+            <p>To execute the exercise, the lifter stands with their feet shoulder width apart and weights or resistance handles held by their side with a pronated (overhand) grip.<br><br>The movement is to bring the arms up in front of the body to eye level and with only a slight bend in the elbow. This isolates the anterior deltoid muscle (front of the shoulder) and uses the anterior deltoid to lift the weight.<br><br>When lifting it is important to keep the body still so the anterior deltoid is fully utilised; if the weight cannot be lifted by standing still then it is too heavy and a lower weight is needed. It is important to keep a slight bend in the elbow when lifting as keeping the elbow locked will add stress to the elbow joint and could cause injury.<br><br>A neutral grip, similar to that used in the hammer curl, can also be used. With this variation the weight is again raised to eye level, but out to a 45 degree angle from the front of the body. This may be beneficial for those with shoulder injuries, particularly those related to the rotator cuff.</p>
+            <br />
+            <p>Equipment: Barbell, Bench</p>
+          </div>
+          <div class="card-action">
+            <a href="#modal-more-info" class="more-info modal-trigger" id="front-raises">More Info</a>
+            <a href="#!" class="add-workout pull right">Add to list</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
   <div id="workoutTab" class="col s12 m12">
     <div class="col s8 m8">
       <table>
