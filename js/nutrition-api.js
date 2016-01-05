@@ -164,13 +164,6 @@ $(document).ready(function() {
       });
     });
 
-    //Execute food search function when user presses enter on keyboard 
-    $("input:text").keypress(function(e) {
-      if(e.which == 13) {
-        $("#food-search").click();
-      }
-    });
-
     //Round number to nearest integer & convert non-integer string values to zero
     function round(value) {
       var number = parseFloat(value) ;
