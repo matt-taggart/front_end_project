@@ -141,7 +141,7 @@ $(document).ready(function() {
             appendToModal(addTransFat);
             addCholesterol = $("<p>")
                               .addClass("cholesterol small-divider")
-                              .html("<strong>Cholesterol</strong> " + round(cholesterol) + cholesterol.unit);
+                              .html("<strong>Cholesterol</strong> " + round(cholesterol.value) + cholesterol.unit);
             appendToModal(addCholesterol);
             addSodium = $("<p>")
                           .addClass("sodium small-divider")
@@ -174,6 +174,13 @@ $(document).ready(function() {
           console.log(errorThrown);
         }
       });
+    });
+
+    //When user clicks 'enter' on keyboard, run food search app
+    $(".food-input-field:input[type='text']").keypress(function(e){
+      if(e.which === 13) {
+        $("#food-search").click();
+      }
     });
 
     //Round number to nearest integer & convert non-integer string values to zero
