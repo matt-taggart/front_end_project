@@ -40,6 +40,25 @@
   border-radius: 10px;
 }
 
+#rounded2 {
+  height: 100px;
+  border-radius: 10px;
+}
+
+#rounded3{
+  height: 100px;
+  border-radius: 10px;
+}
+
+#rounded4 {
+  height: 100px;
+  border-radius: 10px;
+}
+
+.foot-img:hover {
+  opacity: 0.7;
+}
+
 .about {
   -webkit-animation-delay: 1s;
 }
