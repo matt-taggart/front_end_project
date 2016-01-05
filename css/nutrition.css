@@ -132,3 +132,7 @@ h4 {
 :-ms-input-placeholder {
   color: #D9DFDA;
 }
+
+.warning {
+  color: red;
+}
