@@ -53,12 +53,12 @@ h4 {
   background: rgba(255, 255, 255, 0.7);
 }
 
-table {
+.nutrition-table {
   table-layout: fixed;
   width: 100%;
 }
 
-td {
+.nutrition-td {
   width: 300px;
   white-space: normal;
 }
