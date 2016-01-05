@@ -176,6 +176,13 @@ $(document).ready(function() {
       });
     });
 
+    //When user clicks 'enter' on keyboard, run food search app
+    $(".food-input-field:input[type='text']").keypress(function(e){
+      if(e.which === 13) {
+        $("#food-search").click();
+      }
+    });
+
     //Round number to nearest integer & convert non-integer string values to zero
     function round(value) {
       var number = parseFloat(value) ;
