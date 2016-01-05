@@ -53,12 +53,12 @@ h4 {
   background: rgba(255, 255, 255, 0.7);
 }
 
-table {
+.nutrition-table {
   table-layout: fixed;
   width: 100%;
 }
 
-td {
+.nutrition-td {
   width: 300px;
   white-space: normal;
 }
@@ -104,6 +104,17 @@ td {
 .bordered {
   color: white;
   background: rgba(0,0,0,0);
+}
+
+#span-container {
+  color: red;
+  font-size: 14px;
+  height: 18px;
+  margin-left: 60px;
+}
+
+#food-color {
+  margin-bottom: -10px;
 }
 
 ::-webkit-input-placeholder {
