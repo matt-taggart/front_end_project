@@ -5,9 +5,7 @@ $(document).on("ready",function(){
   $(".add-workout").on("click", function(){
     var workoutExerciseIdForList = $(this).prev().attr("id");
     console.log(workoutExerciseIdForList);
-    workoutListAppend(workoutExerciseIdForList);
-    $("#congrats-message").html('Workout added')
-    setTimeout(function(){$("#congrats-message").empty()},2000)
+    duplicateEntryOnList(workoutExerciseIdForList);
   });
 
   //Append all necessary elements to workout list
@@ -34,10 +32,10 @@ $(document).on("ready",function(){
       complete: function() { modalReset(); } // Callback for Modal close
     });
 
+    fieldIsEmpty(workoutExerciseIdForList, workoutName);
     enterToSubmitReps(workoutExerciseIdForList, workoutName);
     enterToSubmitSets(workoutExerciseIdForList, workoutName);
     enterToSubmitWeight(workoutExerciseIdForList, workoutName);
-    fieldIsEmpty(workoutExerciseIdForList, workoutName);
     modalGetId(workoutExerciseIdForList);
     removeWorkoutHandler();
   };
@@ -64,7 +62,11 @@ $(document).on("ready",function(){
       if (e.keyCode == 13) {
         var repAmount = $(this).val();
         console.log(repAmount);
-        if ($.isNumeric(repAmount)) {
+        if (repAmount === "N/A" || repAmount === "NA") {
+          $(this).closest('td').append(repAmount);
+          $(this).closest('div').remove();
+        }
+        else if ($.isNumeric(repAmount)) {
           $(this).closest('td').append(repAmount);
           $(this).closest('div').remove();
         } else {
@@ -80,7 +82,11 @@ $(document).on("ready",function(){
       if (e.keyCode == 13) {
         var setAmount = $(this).val();
         console.log(setAmount);
-        if ($.isNumeric(setAmount)) {
+        if (setAmount === "N/A" || setAmount === "NA") {
+          $(this).closest('td').append(setAmount);
+          $(this).closest('div').remove();
+        }
+        else if ($.isNumeric(setAmount)) {
           $(this).closest('td').append(setAmount);
           $(this).closest('div').remove();
         } else {
@@ -96,7 +102,11 @@ $(document).on("ready",function(){
       if (e.keyCode == 13) {
         var weightAmount = $(this).val();
         console.log(weightAmount);
-        if ($.isNumeric(weightAmount)) {
+        if (weightAmount === "N/A" || weightAmount === "NA") {
+          $(this).closest('td').append(weightAmount);
+          $(this).closest('div').remove();
+        }
+        else if ($.isNumeric(weightAmount)) {
           $(this).closest('td').append(weightAmount);
           $(this).closest('div').remove();
         } else {
@@ -155,5 +165,22 @@ $(document).on("ready",function(){
     $("#exercise-description").empty();
     $("#exercise-equipment").empty();
     $("#exercise-video").empty();
+  };
+
+  var idsOnList = []; //New array is created to detect duplicates in workout list
+
+  //This function gets the index of the variable workoutExerciseIdForList. If indexOf doesn't find the index of the ID of interest, it will return -1.  If it finds anything other than -1, and proceed to workoutListAppend().
+
+  function duplicateEntryOnList(workoutExerciseIdForList, workoutName){
+    var workoutName = workoutInfo[workoutExerciseIdForList][0].exercise;
+    if (idsOnList.indexOf(workoutExerciseIdForList) === -1) {
+        idsOnList.push(workoutExerciseIdForList);
+        workoutListAppend(workoutExerciseIdForList);
+        $("#congrats-message").html('Workout added');
+        setTimeout(function(){$("#congrats-message").empty()},2000);
+    } else if (idsOnList.indexOf(workoutExerciseIdForList) >= 0) {
+      $("#congrats-message").html(workoutName+" has already been added to your workout list!");
+      setTimeout(function(){$("#congrats-message").empty()},2000);
+    };
   };
 });
