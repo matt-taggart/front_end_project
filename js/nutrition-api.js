@@ -5,8 +5,13 @@ $(document).ready(function() {
   $("#food-search").on("click", function(e) {
       e.preventDefault();    
       var search = $(".food-input-field:text").val(); 
+
+      if (search.length === 0) {
+        $("#wrong-input").html("Please enter a valid food type");
+      } else {
       $("thead").empty();
       $("tbody").empty();
+      $("#wrong-input").empty();
 
       var foodSearchParams = {
         "format": "json",
@@ -25,26 +30,29 @@ $(document).ready(function() {
             var foodList = buildTable(data);           
         },
         error: function(jqXHR, textstatus, errorThrown) {
+          if(textstatus === "error") {
+            $("#wrong-input").html("Please enter a valid food type");
+          }
           console.log(jqXHR);
           console.log(textstatus);
           console.log(errorThrown);
         }
       });
-
+    }
   });
 
     //Build table rows for each food item and append to html
     function buildTable(foodData) {
       var itemList = foodData.list.item;
       var foodGroup, foodName, checkbox, input, label, appendCheckbox, newDiv, createButton, addButton, floatingButton, ndbNumber, createTable, categoryHeading, nameHeading, tr, headTr;
-      $("table").addClass("bordered centered bg-white responsive-table animated fadeIn");
+      $(".nutrition-table").addClass("bordered centered bg-white responsive-table animated fadeIn");
       categoryHeading = $("<th>").html("Category");
       nameHeading = $("<th>").html("Name");
       headTr = $("<tr>")
                   .append(categoryHeading)
                   .append(nameHeading)
                   .append("<th></th>");
-      $("thead")
+      $(".nutrition-table-head")
           .addClass("centered")
           .append(headTr);       
       for (var i = 0; i < itemList.length; i++) {
@@ -66,7 +74,7 @@ $(document).ready(function() {
                 .append(foodGroup)
                 .append(foodName)
                 .append(addButton);
-        $("tbody").append(tr);
+        $(".nutrition-table-body").append(tr);
       }
     }
 
