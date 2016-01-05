@@ -106,6 +106,17 @@ td {
   background: rgba(0,0,0,0);
 }
 
+#span-container {
+  color: red;
+  font-size: 14px;
+  height: 18px;
+  margin-left: 60px;
+}
+
+#food-color {
+  margin-bottom: -10px;
+}
+
 ::-webkit-input-placeholder {
   color: #D9DFDA;
 }
