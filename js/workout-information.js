@@ -449,4 +449,24 @@ var workoutInfo = {
               "workoutVideoUrl": '<iframe width="420" height="345" src="https://www.youtube.com/embed/vj2w851ZHRM"></iframe>'
           }
       ],
+    "front-raises": [
+          {
+              "exercise": "Front raises"
+          },
+          {
+              "description": "To execute the exercise, the lifter stands with their feet shoulder width apart and weights or resistance handles held by their side with a pronated (overhand) grip.<br><br>The movement is to bring the arms up in front of the body to eye level and with only a slight bend in the elbow. This isolates the anterior deltoid muscle (front of the shoulder) and uses the anterior deltoid to lift the weight.<br><br>When lifting it is important to keep the body still so the anterior deltoid is fully utilised; if the weight cannot be lifted by standing still then it is too heavy and a lower weight is needed. It is important to keep a slight bend in the elbow when lifting as keeping the elbow locked will add stress to the elbow joint and could cause injury.<br><br>A neutral grip, similar to that used in the hammer curl, can also be used. With this variation the weight is again raised to eye level, but out to a 45 degree angle from the front of the body. This may be beneficial for those with shoulder injuries, particularly those related to the rotator cuff."
+          },
+          {
+              "equipment": "Equipment: Barbell, bench"
+          },
+          {
+              "musclesFront": ""
+          },
+          {
+              "musclesBack": ""
+          },
+          {
+              "workoutVideoUrl": '<iframe width="420" height="345" src="https://www.youtube.com/embed/sH_5J6lcvJk"></iframe>'
+          }
+      ],
 }
