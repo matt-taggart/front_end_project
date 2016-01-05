@@ -6,18 +6,14 @@ Our goal was to provide introductory information when deciding that it's time to
 
 
 ### Technologies Used
-HTML5, Javascript, jQuery, Materialize.css
+HTML5, Javascript, jQuery, Google Maps V3, Materialize.css
 
 ### Deployed Link
-
-http://my.herokuapp.com/
-
+http://gymtrition.herokuapp.com/
 
 ### API's Used
 * Google Maps API - https://developers.google.com/maps/?hl=en
-* USDA - http://www.mygymflow.com/api.html
-
+* USDA - http://ndb.nal.usda.gov/ndb/api/doc
 
 ### Trello Link
-
-http://trello.com/myproject Add albertbahia and shamoons
+http://trello.com/myproject 
