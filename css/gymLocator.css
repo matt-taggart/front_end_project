@@ -1,0 +1,85 @@
+/*      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: yellow;
+      }*/
+      #map {
+        height: 420px;
+        width: 600px;
+        margin-bottom: 30px;
+      }
+
+      #resultsTable {
+        font-size: 12px;
+      }
+
+      #listing {
+        position: relative;
+        width: 250px;
+        height: 420px;
+        overflow: auto;
+/*        left: 442px;*/
+        top: 0px;
+        cursor: pointer;
+        overflow-x: hidden;
+      }
+      #findgym {
+        position: relative;
+        text-align: right;
+        width: 100px;
+        font-size: 14px;
+        padding: 4px;
+        z-index: 5;
+        background-color: #fff;
+      }
+
+      #controls {
+        position: absolute;
+        left: 300px;
+        width: 140px;
+        top: 0px;
+        z-index: 5;
+        background-color: #fff;
+      }
+      #autocomplete {
+        width: 100%;
+      }
+      #country {
+        width: 100%;
+      }
+      .placeIcon {
+        width: 20px;
+        height: 34px;
+        margin: 4px;
+      }
+      .gymIcon {
+        width: 24px;
+        height: 24px;
+      }
+      #resultsTable {
+        border-collapse: collapse;
+        width: 240px;
+      }
+      #rating {
+        font-size: 13px;
+/*        font-family: Arial Unicode MS;*/
+      }
+      .iw_table_row {
+        height: 18px;
+      }
+      .iw_attribute_name {
+        font-weight: bold;
+        text-align: right;
+      }
+      .iw_table_icon {
+        text-align: right;
+      }
+
+      #locationField input[type=text] {
+        color: #D9DFDA;
+      }
+
+      .fitness-container {
+        margin-bottom: -20px;
+      }

@@ -1,103 +1,99 @@
-<!DOCTYPE html>
-<!-- <html>
+<html>
+
 <head>
-  <title>Google Maps Gym Search</title>
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <title>I Don't Know</title>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/gymLocator.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
+
 <body>
-  <div class="container">
+
+  <!--Find Gym-->
+
+
+  <div class="grey darken-4">
     <div class="row">
-      <div class="col-md-4">
-        <form class="form-inline">
-          <div class="form-group">
-            <label>Address</label>
-            <input type="text" class="form-control" id="userLocation" placeholder="Where are you?" />
-          </div>
-          <button type="submit" class="btn btn-default">Search!</button>
-        </form>
+      <div id="gym-row">
+        <div class="col s10">
+          <h1 class="header cyan-text">Find Fitness Center Near You:</h1>
+        </div>
+        <div class="col s2 m2"><a id="homebutton" href="index.html" class="waves-effect waves-light btn right"><i class="material-icons right">home</i></a></div>
       </div>
     </div>
-    <div id="map">
 
+    <div class="container">
+      <div class="row valign-wrapper">
+        <div class="input-field col s6 valign" id="locationField">
+          <input id="autocomplete" placeholder="Enter a city" type="text" />
+        </div>
+      </div>
+
+      <div id="controls">
+        <select id="country">
+          <option value="all">All</option>
+          <option value="au">Australia</option>
+          <option value="br">Brazil</option>
+          <option value="ca">Canada</option>
+          <option value="fr">France</option>
+          <option value="de">Germany</option>
+          <option value="mx">Mexico</option>
+          <option value="nz">New Zealand</option>
+          <option value="it">Italy</option>
+          <option value="za">South Africa</option>
+          <option value="es">Spain</option>
+          <option value="pt">Portugal</option>
+          <option value="us" selected>U.S.A.</option>
+          <option value="uk">United Kingdom</option>
+        </select>
+      </div>
+      <div class="row">
+        <div class="col s8" id="map"></div>
+        <div class="col s4" id="listing">
+          <table id="resultsTable">
+            <tbody id="results"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: none">
+      <div id="info-content">
+        <table>
+          <tr id="iw-url-row" class="iw_table_row">
+            <td id="iw-icon" class="iw_table_icon"></td>
+            <td id="iw-url"></td>
+          </tr>
+          <tr id="iw-address-row" class="iw_table_row">
+            <td class="iw_attribute_name">Address:</td>
+            <td id="iw-address"></td>
+          </tr>
+          <tr id="iw-phone-row" class="iw_table_row">
+            <td class="iw_attribute_name">Telephone:</td>
+            <td id="iw-phone"></td>
+          </tr>
+          <tr id="iw-rating-row" class="iw_table_row">
+            <td class="iw_attribute_name">Rating:</td>
+            <td id="iw-rating"></td>
+          </tr>
+          <tr id="iw-website-row" class="iw_table_row">
+            <td class="iw_attribute_name">Website:</td>
+            <td id="iw-website"></td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_9FtkYT4VyHxNc8W3e9WA2-zW7yVHgYA&signed_in=true&libraries=places&callback=initMap" async defer></script>
-<script type="text/javascript" src="js/gymLocator.js"></script>
+
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+  <script src="js/jquery.runner-min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/gymLocator.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOp2iLJ_trBuUfHM9yNoXwQS2h2IKDtQs&signed_in=true&libraries=places&callback=initMap" async defer></script>
 </body>
-</html> -->
 
-<html>
-  <head>
-    <title>Geocoding service</title>
-    <link rel="stylesheet" type="text/css" href="css/gymLocator.css">
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-  </head>
-  <body>
-    <div id="floating-panel">
-      <input id="address" type="textbox" value="Sydney, NSW">
-      <input id="submit" type="button" value="Geocode">
-    </div>
-    <div id="map">
-    </div>
-    
-<style>
-  html,
-  body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  #map {
-    height: 100%;
-  }
-  
-  #floating-panel {
-    position: absolute;
-    top: 10px;
-    left: 25%;
-    z-index: 5;
-    background-color: #fff;
-    padding: 5px;
-    border: 1px solid #999;
-    text-align: center;
-    font-family: 'Roboto', 'sans-serif';
-    line-height: 30px;
-    padding-left: 10px;
-  }
-</style>
-<script>
-function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 8,
-    center: {lat: -34.397, lng: 150.644}
-  });
-  var geocoder = new google.maps.Geocoder();
-
-  document.getElementById('submit').addEventListener('click', function() {
-    geocodeAddress(geocoder, map);
-  });
-}
-
-function geocodeAddress(geocoder, resultsMap) {
-  var address = document.getElementById('address').value;
-  geocoder.geocode({'address': address}, function(results, status) {
-    if (status === google.maps.GeocoderStatus.OK) {
-      resultsMap.setCenter(results[0].geometry.location);
-      var marker = new google.maps.Marker({
-        map: resultsMap,
-        position: results[0].geometry.location
-      });
-    } else {
-      alert('Geocode was not successful for the following reason: ' + status);
-    }
-  });
-}
-
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_9FtkYT4VyHxNc8W3e9WA2-zW7yVHgYA&signed_in=true&callback=initMap"
-        async defer></script>
-  </body>
 </html>

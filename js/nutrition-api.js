@@ -9,8 +9,8 @@ $(document).ready(function() {
       if (search.length === 0) {
         $("#wrong-input").html("Please enter a valid food type");
       } else {
-      $("thead").empty();
-      $("tbody").empty();
+      $(".nutrition-table-head").empty();
+      $(".nutrition-table-body").empty();
       $("#wrong-input").empty();
 
       var foodSearchParams = {
@@ -56,13 +56,18 @@ $(document).ready(function() {
           .addClass("centered")
           .append(headTr);       
       for (var i = 0; i < itemList.length; i++) {
-        foodGroup = $("<td>").html(itemList[i].group);
-        foodName = $("<td>").html(itemList[i].name);
+        foodGroup = $("<td>")
+                        .addClass("nutrition-td")
+                        .html(itemList[i].group);
+        foodName = $("<td>")
+                    .addClass("nutrition-td")
+                    .html(itemList[i].name);
         checkbox = $("<p>")
                       .append(input)
                       .append(label);
         ndbNumber = itemList[i].ndbno;
-        newDiv = $("<td>");
+        newDiv = $("<td>")
+                  .addClass("nutrition-td");
         createButton = $("<a>")
                         .addClass("waves-effect waves-light btn cyan nutrition modal-trigger")
                         .attr("href", "#nutrition-facts")
@@ -170,13 +175,6 @@ $(document).ready(function() {
           console.log(errorThrown);
         }
       });
-    });
-
-    //Execute food search function when user presses enter on keyboard 
-    $("input:text").keypress(function(e) {
-      if(e.which == 13) {
-        $("#food-search").click();
-      }
     });
 
     //Round number to nearest integer & convert non-integer string values to zero
