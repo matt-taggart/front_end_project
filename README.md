@@ -16,4 +16,4 @@ http://gymtrition.herokuapp.com/
 * USDA - http://ndb.nal.usda.gov/ndb/api/doc
 
 ### Trello Link
-http://trello.com/myproject 
+https://trello.com/b/Xtl1of7E/front-end-project
