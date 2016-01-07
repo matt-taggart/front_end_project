@@ -6,9 +6,9 @@
       }*/
       #map {
         height: 420px;
-        width: 600px;
+        width: 66%;
         margin-bottom: 30px;
-        position: relative;
+/*        position: relative;*/
       }
 
       #resultsTable {
