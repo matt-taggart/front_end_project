@@ -6,7 +6,7 @@
       }*/
       #map {
         height: 420px;
-        width: 600px;
+        width: 66%;
         margin-bottom: 30px;
         position: relative;
       }
@@ -17,7 +17,7 @@
 
       #listing {
         position: relative;
-        width: 250px;
+/*        width: 33%;*/
         height: 420px;
         overflow: auto;
 /*        left: 442px;*/
