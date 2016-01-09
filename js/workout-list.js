@@ -169,7 +169,7 @@ $(document).on("ready",function(){
 
   var idsOnList = []; //New array is created to detect duplicates in workout list
 
-  //This function gets the index of the variable workoutExerciseIdForList. If indexOf doesn't find the index of the ID of interest, it will return -1.  If it finds anything other than -1, and proceed to workoutListAppend().
+  //This function gets the index of the variable workoutExerciseIdForList in the array idsOnList. If indexOf doesn't find the index of the ID of interest, it will return -1.  If it finds anything other than -1, and proceed to workoutListAppend().
 
   function duplicateEntryOnList(workoutExerciseIdForList, workoutName){
     var workoutName = workoutInfo[workoutExerciseIdForList][0].exercise;
