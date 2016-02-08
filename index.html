@@ -203,12 +203,13 @@
               </table>
             </div>
             <div>
-              <p class="warning">*Please Note: The permissions on your local browser may need to be updated for app to function properly</p>
+              <p class="warning">*Please Note: The permissions on your local browser may need to be updated for app to show results: </p>
+              <p id="instruction_one"><a href="#">1) Instructions for Chrome</a></p>
+              <p id="instruction_two"><a href="#">2) Instructions for Firefox</a></p>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
     <!-- MODAL STRUCTURE-->
 
@@ -218,6 +219,36 @@
         <button class="modal-action modal-close waves-effect waves-green btn-flat">Close</button>
       </div>
     </div>
+
+    <!-- Chrome Instructons Modal -->    
+    <div id="instructions-chrome" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <p><strong>Step 1:</strong> Visit <a href="https://api.nal.usda.gov/ndb/nutrients">https://api.nal.usda.gov/ndb/nutrients</a>.</p>
+        <p><strong>Step 2:</strong> Click on "Advanced Settings."</p>
+      <img src="img/chrome.png">
+      <p><strong>Step 3:</strong> Click on "Proceed to <a href="https://api.nal.usda.gov/ndb/nutrients">https://api.nal.usda.gov/ndb/nutrients</a>."</p>
+      <p><strong>Step 4:</strong> Try your search again!</p>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-action modal-close waves-effect waves-green btn-flat">Close</button>
+      </div>
+    </div>
+
+    <!-- Firefox Instructons Modal -->    
+    <div id="instructions-firefox" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <p><strong>Step 1:</strong> Visit <a href="https://api.nal.usda.gov/ndb/nutrients">https://api.nal.usda.gov/ndb/nutrients</a>.</p>
+        <p><strong>Step 2:</strong> Click on "I Understand the Risks."</p>
+        <p><strong>Step 3:</strong> Click on "Add Exception."</p>
+        <img src="img/firefox.png">
+        <p><strong>Step 4:</strong> Click on "Confirm Security Exception."</p>
+        <p><strong>Step 5:</strong> Try your search again!</p>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-action modal-close waves-effect waves-green btn-flat">Close</button>
+      </div>
+    </div>  
+
     <div class="parallax-container">
       <div class="parallax"><img src="img/food.jpg"></div>
       </div>
