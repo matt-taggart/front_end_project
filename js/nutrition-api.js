@@ -216,4 +216,13 @@ $(document).ready(function() {
       $(".modal-content").append(nutrient);
     }
 
+    $(document).on("click", "#instruction_one", function(e) {
+      e.preventDefault();
+      $("#instructions-chrome").openModal();    
+    });
+
+    $(document).on("click", "#instruction_two", function(e) {
+      e.preventDefault();
+      $("#instructions-firefox").openModal();    
+    });
 });
